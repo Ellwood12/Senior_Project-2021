@@ -1,14 +1,16 @@
 ---
 title: "The Two Child Problem"
 description: |
-  A short description of the post.
-author:
-  - name: Asher Hanson
-    url: https://example.com/norajones
+  When given the chance to guess the gender of a child, is it
+  as easy at fifty-fifty, or is there some deeper probability at hand?  In this problem, we explore the probability of guessing the gender of a twin when we already know the gender of one.
+#author:
+#  - name: Asher Hanson
+#    url: https://example.com/norajones
 date: 2021-09-29
 output:
   distill::distill_article:
     self_contained: false
+
 ---
 
 

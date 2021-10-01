@@ -1,7 +1,7 @@
 ---
 title: "The Monty Hall"
 description: |
-  A short description of the post.
+  Are you ready to put your luck to the test to try and win a new car?  As we explore the once great game, "Let Make a Deal", back from 1975, you will have the chance to see if you can crack the puzzle and win the prize.
 author:
   - name: Asher Hanson
     url: https://example.com/norajones

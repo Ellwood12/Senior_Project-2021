@@ -1,8 +1,71 @@
 [
   {
+    "path": "posts/2021-09-29-the-birthday-paradox/",
+    "title": "The Birthday Paradox",
+    "description": "Are birthday's all that random or is there a great chance that someone in the same room as you right now has the same birthday?  As we unravel this paradox, you will be suprised to find that chance of sharing the same special day, really isn't that surprising.",
+    "author": [
+      {
+        "name": "Asher Hanson",
+        "url": "https://example.com/norajones"
+      }
+    ],
+    "date": "2024-09-29",
+    "categories": [],
+    "contents": "\nDistill is a publication format for scientific and technical writing, native to the web.\nLearn more about using Distill at https://rstudio.github.io/distill.\n\n\n\n",
+    "preview": {},
+    "last_modified": "2021-09-30T08:37:33-06:00",
+    "input_file": {}
+  },
+  {
+    "path": "posts/2021-10-01-does-this-work/",
+    "title": "Does This Work",
+    "description": "A short description of the post.",
+    "author": [
+      {
+        "name": "Asher Hanson",
+        "url": "https://example.com/norajones"
+      }
+    ],
+    "date": "2021-10-01",
+    "categories": [],
+    "contents": "\nDistill is a publication format for scientific and technical writing, native to the web.\nLearn more about using Distill at https://rstudio.github.io/distill.\n\n\n\n",
+    "preview": {},
+    "last_modified": "2021-10-01T12:34:43-06:00",
+    "input_file": {}
+  },
+  {
+    "path": "posts/2021-09-29-the-monty-hall/",
+    "title": "The Monty Hall",
+    "description": "Are you ready to put your luck to the test to try and win a new car?  As we explore the once great game, \"Let Make a Deal\", back from 1975, you will have the chane to see if you can crack the puzzle and win the prize.",
+    "author": [
+      {
+        "name": "Asher Hanson",
+        "url": "https://example.com/norajones"
+      }
+    ],
+    "date": "2021-09-29",
+    "categories": [],
+    "contents": "\nDistill is a publication format for scientific and technical writing, native to the web.\nLearn more about using Distill at https://rstudio.github.io/distill.\n\n\n\n",
+    "preview": {},
+    "last_modified": "2021-09-30T08:31:09-06:00",
+    "input_file": {}
+  },
+  {
+    "path": "posts/2021-09-29-the-two-child-problem/",
+    "title": "The Two Child Problem",
+    "description": "When given the chance to guess the gender of a child, is it\nas easy at fifty-fifty, or is there some deeper probability at hand?  In this problem, we explore the probability of guessing the gender of a twin when we already know the gender of one.",
+    "author": [],
+    "date": "2021-09-29",
+    "categories": [],
+    "contents": "\nDistill is a publication format for scientific and technical writing, native to the web.\nLearn more about using Distill at https://rstudio.github.io/distill.\n\n\n\n",
+    "preview": {},
+    "last_modified": "2021-09-30T08:32:11-06:00",
+    "input_file": {}
+  },
+  {
     "path": "posts/welcome/",
     "title": "Welcome to Data Science Applications",
-    "description": "Welcome to our new blog, Data Science Applicationsy!",
+    "description": {},
     "author": [
       {
         "name": "Asher Hanson",
@@ -11,9 +74,9 @@
     ],
     "date": "2021-09-21",
     "categories": [],
-    "contents": "\n\n\n\n\n\n\n\n\n\n",
+    "contents": "\n\n\n\n\n\n\n\n\n",
     "preview": {},
-    "last_modified": "2021-09-23T17:04:35-06:00",
-    "input_file": "welcome.knit.md"
+    "last_modified": "2021-09-29T17:24:42-06:00",
+    "input_file": {}
   }
 ]

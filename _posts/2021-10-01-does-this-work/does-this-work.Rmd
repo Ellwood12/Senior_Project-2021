@@ -1,11 +1,11 @@
 ---
-title: "The Birthday Paradox"
+title: "Does This Work"
 description: |
-  Are birthday's all that random or is there a great chance that someone in the same room as you right now has the same birthday?  As we unravel this paradox, you will be suprised to find that chance of sharing the same special day, really isn't that surprising.
+  A short description of the post.
 author:
   - name: Asher Hanson
     url: https://example.com/norajones
-date: 2024-09-29
+date: 2021-10-01
 output:
   distill::distill_article:
     self_contained: false
