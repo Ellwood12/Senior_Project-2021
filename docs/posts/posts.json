@@ -17,33 +17,16 @@
     "input_file": {}
   },
   {
-    "path": "posts/2021-10-01-does-this-work/",
-    "title": "Does This Work",
-    "description": "A short description of the post.",
-    "author": [
-      {
-        "name": "Asher Hanson",
-        "url": "https://example.com/norajones"
-      }
-    ],
-    "date": "2021-10-01",
-    "categories": [],
-    "contents": "\nDistill is a publication format for scientific and technical writing, native to the web.\nLearn more about using Distill at https://rstudio.github.io/distill.\n\n\n\n",
-    "preview": {},
-    "last_modified": "2021-10-01T12:34:43-06:00",
-    "input_file": {}
-  },
-  {
     "path": "posts/2021-09-29-the-monty-hall/",
     "title": "The Monty Hall",
     "description": "Are you ready to put your luck to the test to try and win a new car?  As we explore the once great game, \"Let Make a Deal\", back from 1975, you will have the chance to see if you can crack the puzzle and win the prize.",
     "author": [],
     "date": "2021-09-29",
     "categories": [],
-    "contents": "\nLet’s begging unraveling this fantastic puzzle!\n\n\n\n\n\n\n\n\n",
+    "contents": "\nLet’s begging unraveling this fantastic puzzle!\n\n\n\n\n",
     "preview": {},
-    "last_modified": "2021-10-04T08:11:41-06:00",
-    "input_file": {}
+    "last_modified": "2021-10-04T15:33:27-06:00",
+    "input_file": "the-monty-hall.knit.md"
   },
   {
     "path": "posts/2021-09-29-the-two-child-problem/",
