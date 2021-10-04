@@ -36,18 +36,13 @@
   {
     "path": "posts/2021-09-29-the-monty-hall/",
     "title": "The Monty Hall",
-    "description": "Are you ready to put your luck to the test to try and win a new car?  As we explore the once great game, \"Let Make a Deal\", back from 1975, you will have the chane to see if you can crack the puzzle and win the prize.",
-    "author": [
-      {
-        "name": "Asher Hanson",
-        "url": "https://example.com/norajones"
-      }
-    ],
+    "description": "Are you ready to put your luck to the test to try and win a new car?  As we explore the once great game, \"Let Make a Deal\", back from 1975, you will have the chance to see if you can crack the puzzle and win the prize.",
+    "author": [],
     "date": "2021-09-29",
     "categories": [],
-    "contents": "\nDistill is a publication format for scientific and technical writing, native to the web.\nLearn more about using Distill at https://rstudio.github.io/distill.\n\n\n\n",
+    "contents": "\nLet’s begging unraveling this fantastic puzzle!\n\n\n\n\n\n\n\n\n",
     "preview": {},
-    "last_modified": "2021-09-30T08:31:09-06:00",
+    "last_modified": "2021-10-04T08:11:41-06:00",
     "input_file": {}
   },
   {

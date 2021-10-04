@@ -2,9 +2,6 @@
 title: "The Monty Hall"
 description: |
   Are you ready to put your luck to the test to try and win a new car?  As we explore the once great game, "Let Make a Deal", back from 1975, you will have the chance to see if you can crack the puzzle and win the prize.
-author:
-  - name: Asher Hanson
-    url: https://example.com/norajones
 date: 2021-09-29
 output:
   distill::distill_article:
@@ -12,12 +9,12 @@ output:
 ---
 
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
-```
+Let's begging unraveling this fantastic puzzle!
 
-Distill is a publication format for scientific and technical writing, native to the web.
+![](../../images/Image_Slide.png)
 
-Learn more about using Distill at <https://rstudio.github.io/distill>.
+
+
+
 
 

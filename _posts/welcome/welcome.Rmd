@@ -6,7 +6,6 @@ author:
   - name: Asher Hanson 
     url: https://example.com/norajones
     affiliation: Brigham Young University - Idaho
-    affiliation_url: https://example.com/spacelysprokets
 date: 09-21-2021
 output:
   distill::distill_article:
