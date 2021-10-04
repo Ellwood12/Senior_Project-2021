@@ -1,22 +1,5 @@
 [
   {
-    "path": "posts/2021-09-29-the-birthday-paradox/",
-    "title": "The Birthday Paradox",
-    "description": "Are birthday's all that random or is there a great chance that someone in the same room as you right now has the same birthday?  As we unravel this paradox, you will be suprised to find that chance of sharing the same special day, really isn't that surprising.",
-    "author": [
-      {
-        "name": "Asher Hanson",
-        "url": "https://example.com/norajones"
-      }
-    ],
-    "date": "2024-09-29",
-    "categories": [],
-    "contents": "\nDistill is a publication format for scientific and technical writing, native to the web.\nLearn more about using Distill at https://rstudio.github.io/distill.\n\n\n\n",
-    "preview": {},
-    "last_modified": "2021-09-30T08:37:33-06:00",
-    "input_file": {}
-  },
-  {
     "path": "posts/2021-09-29-the-monty-hall/",
     "title": "The Monty Hall",
     "description": "Are you ready to put your luck to the test to try and win a new car?  As we explore the once great game, \"Let Make a Deal\", back from 1975, you will have the chance to see if you can crack the puzzle and win the prize.",
@@ -55,6 +38,23 @@
     "contents": "\n\n\n\n\n\n\n\n\n",
     "preview": {},
     "last_modified": "2021-09-29T17:24:42-06:00",
+    "input_file": {}
+  },
+  {
+    "path": "posts/2021-09-29-the-birthday-paradox/",
+    "title": "The Birthday Paradox",
+    "description": "Are birthday's all that random or is there a great chance that someone in the same room as you right now has the same birthday?  As we unravel this paradox, you will be suprised to find that chance of sharing the same special day, really isn't that surprising.",
+    "author": [
+      {
+        "name": "Asher Hanson",
+        "url": "https://example.com/norajones"
+      }
+    ],
+    "date": "2018-09-29",
+    "categories": [],
+    "contents": "\nDistill is a publication format for scientific and technical writing, native to the web.\nLearn more about using Distill at https://rstudio.github.io/distill.\n\n\n\n",
+    "preview": {},
+    "last_modified": "2021-10-04T16:30:05-06:00",
     "input_file": {}
   }
 ]
