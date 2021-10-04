@@ -8,11 +8,19 @@ output:
     self_contained: false
 ---
 
+<center>
+![](../../images/Logo.png){
+width=70% }
+</center>
 
-Let's begging unraveling this fantastic puzzle!
 
-![](../../images/Image_Slide.png)
+<center> 
+# **Let's begging unraveling this fantastic puzzle!** 
+</center>
 
+<center>
+![](../../images/Image_Slide.png){width=90%}
+</center>
 
 
 

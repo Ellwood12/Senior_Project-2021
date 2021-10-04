@@ -27,36 +27,11 @@ knitr::opts_chunk$set(echo = FALSE)
 ```
 
 ```{r,warning=FALSE, message=FALSE}
-library(jpeg)
-library(png)
-
-queen_url <- "https://github.com/Ellwood12/data_science_blog/raw/master/images/Queen.jpg"
-z <- tempfile()
-download.file(queen_url,z,mode = "wb")
-pic_q <- readJPEG(z)
-writeJPEG(pic_q,"Queen.jpg")
-
-goat_url <- "https://github.com/Ellwood12/data_science_blog/raw/master/images/Goat.png"
-x <- tempfile()
-download.file(goat_url ,x,mode = "wb")
-pic_g <- readPNG(x)
-writePNG(pic_g,"Goat.png")
-
-Card_url <- "https://github.com/Ellwood12/data_science_blog/raw/master/images/Back_side.png"
-y <- tempfile()
-download.file(Card_url,y,mode = "wb")
-pic_c <- readPNG(y)
-writePNG(pic_c,"Card.png")
 
 ```
 
 
-![](../../images/Queen.jpg)
 
 
-
-
-
-![](../../images/Back_side.png)
 
 
