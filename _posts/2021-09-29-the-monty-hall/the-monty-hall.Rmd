@@ -9,7 +9,7 @@ output:
 ---
 
 <center>
-![](../../images/Logo.png){width=60%}{height=60%}
+![](../../images/Logo.png){width=60% height=60%}
 </center>
 
 # **Background** 
