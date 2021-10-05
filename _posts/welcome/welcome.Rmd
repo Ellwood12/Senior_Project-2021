@@ -4,8 +4,6 @@ title: "Welcome to Data Science Applications"
 #  Welcome to our new blog, Data Science Applications!
 author:
   - name: Asher Hanson 
-    url: https://example.com/norajones
-    affiliation: Brigham Young University - Idaho
 date: 09-21-2021
 output:
   distill::distill_article:
