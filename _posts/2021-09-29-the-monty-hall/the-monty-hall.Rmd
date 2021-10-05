@@ -8,6 +8,8 @@ output:
     self_contained: false
 ---
 
+Image starts here
+
 <center>
 ![](../../images/Logo.png){width=60% height=60%}
 </center>
