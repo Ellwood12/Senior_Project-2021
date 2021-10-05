@@ -9,11 +9,12 @@ output:
 ---
 
 <center>
-![](../../images/Logo.png){width=60% height=60%}
+![](../../images/Logo.png){width=60%}{height=60%}
 </center>
 
 # **Background** 
 
+The American TV show, "Let's Make A Deal", started in 1963 and was a global hit.  The premise of the game was that a contestant will be offered a prize and then a choice whether they would like to keep it, or exchange it for a different prize.  The challenge is that the other prize is hidden from the player.  So in the act of exchanging, the player doesn't know if they are getting a new prize of better or worse value.
 
 
 <center>
