@@ -12,10 +12,9 @@ output:
 ![](../../images/Logo.png){width=60% height=60%}
 </center>
 
+# **Background** 
 
-<center> 
-# **Let's begin unraveling this fantastic puzzle!** 
-</center>
+
 
 <center>
 ![](../../images/Image_Slide.png){width=90%}
