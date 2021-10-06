@@ -1,25 +1,14 @@
 ---
-title: "The Two Child Problem"
+title: "The Twin Problem"
 description: |
   When given the chance to guess the gender of a child, is it
-  as easy at fifty-fifty, or is there some deeper probability at hand?  In this problem, we explore the probability of guessing the gender of a twin when we already know the gender of one.
-#author:
-#  - name: Asher Hanson
-#    url: https://example.com/norajones
+  as easy at fifty-fifty, or is there some deeper probability at hand?  In this problem, we explore the probability of guessing the gender of a twin when we are told the gender of one.
+preview: ../../images/profile_twin_pic.png
 date: 2021-09-29
 output:
   distill::distill_article:
     self_contained: false
 
 ---
-
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
-```
-
-Distill is a publication format for scientific and technical writing, native to the web.
-
-Learn more about using Distill at <https://rstudio.github.io/distill>.
 
 
