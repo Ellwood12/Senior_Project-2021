@@ -2,9 +2,7 @@
 title: "Welcome to Data Science Applications"
 #description: |
 #  Welcome to our new blog, Data Science Applications!
-author:
-  - name: Asher Hanson 
-date: 09-21-2021
+#date: 09-21-2021
 output:
   distill::distill_article:
     self_contained: false

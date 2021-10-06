@@ -1,14 +1,26 @@
 [
   {
+    "path": "posts/welcome/",
+    "title": "Welcome to Data Science Applications",
+    "description": {},
+    "author": [],
+    "date": "2021-10-05",
+    "categories": [],
+    "contents": "\n\n\n\n\n\n\n",
+    "preview": {},
+    "last_modified": "2021-10-05T18:29:24-06:00",
+    "input_file": {}
+  },
+  {
     "path": "posts/2021-09-29-the-monty-hall/",
     "title": "The Monty Hall",
     "description": "Are you ready to put your luck to the test to try and win a new car?  As we explore the once great game, \"Let Make a Deal\", back from 1975, you will have the chance to see if you can crack the puzzle and win the prize.",
     "author": [],
     "date": "2021-09-29",
     "categories": [],
-    "contents": "\nImage starts here\n\n\nThe Game\nThe American TV show, “Let’s Make A Deal”, started in 1963 and was a global hit. The premise of the game was that a contestant would be offered a prize and then given a choice whether they would like to keep it, or exchange it for a different prize. The challenge is that the other prize is hidden from the player. So in the act of exchanging, the player doesn’t know if they are getting a new prize of better or worse value.\nOn the show, there was a particular game that was played that has since then become famous and has been named the Monty Hall Problem. In this game, the contestant would be shown three doors, behind one of them, a glorious prize, behind the other two, goats. Through a serious of steps, the contestant would try and guess which door has the prize.\nBefore I share some statistical knowledge to them game, lets run through it as if we were contestants. Instead of playing behind three doors, we will play with playing cards that either have a goat or a queen. As in the image below, there are there are two possible outcomes, a goat or a queen.\n\nFace Down\n\n\n\n\nFace Up\n\n\n\n\n\n\n",
-    "preview": {},
-    "last_modified": "2021-10-05T17:23:53-06:00",
+    "contents": "\n\n\nThe Game\nThe American TV show, “Let’s Make A Deal”, started in 1963 and was a global hit. The premise of the game was that a contestant would be offered a prize and then given a choice whether they would like to keep it, or exchange it for a different prize. The challenge is that the other prize is hidden from the player. So in the act of exchanging, the player doesn’t know if they are getting a new prize of better or worse value.\nOn the show, there was a particular game that was played that has since then become famous and has been named the Monty Hall Problem. In this game, the contestant would be shown three doors, behind one of them, a glorious prize, behind the other two, goats. Through a serious of steps, the contestant would try and guess which door has the prize.\nBefore I share some statistical knowledge to them game, lets run through it as if we were contestants. Instead of playing behind three doors, we will play with playing cards that either have a goat or a queen. As in the image below, there are there are two possible outcomes, a goat or a queen.\n\nFace Down\n\n\n\n\nFace Up\n\n\n\nLet’s Play a Round\nWhat would happen first, is Monty (the Host of the game show), would ask you to pick any door. You would then pick any of the three cards. Note, we are not going to flip over this card, but rather, save it for later. Now, let’s say you pick the left door to save because you think it has the Queen behind it.\n\n\nAfter picking which door to save, Monty would then show you a goat behind one of the other two doors. Since two of the cards have goats on the other side, there will always be at least one card to flip over that has the goat.\n\n\nAt this point, you know that the Queen is either behind the card you chose at the beginning or behind the card still face down. Monty will then ask you, would you like to keep your card, or switch to the other one. Which ever card you pick will be the card you end the game with, resulting in either a grand prize, or a goat.\nIn this example, you decide to test your luck and stay with the card you picked at the beginning. Monty then flips over the cards to show that your card had the other goat. Sadly, you lost the game and didn’t get the prize.\n\n\nThe concept of this game seems quite straightforward - pick a card and hope that you picked right. But, there is little more than just luck at play in this game. As this game was played more and more times, statisticans found that this game relid greatly upon the fundatmentals of probability.\nIn the next section, I will elaborate on how probabilty might hold the key to understand this game as well as winning the prize.\nThe Probability Explained\n\n\n\n",
+    "preview": "posts/2021-09-29-the-monty-hall/../../images/Logo.png",
+    "last_modified": "2021-10-05T18:32:51-06:00",
     "input_file": {}
   },
   {
@@ -21,23 +33,6 @@
     "contents": "\nDistill is a publication format for scientific and technical writing, native to the web.\nLearn more about using Distill at https://rstudio.github.io/distill.\n\n\n\n",
     "preview": {},
     "last_modified": "2021-09-30T08:32:11-06:00",
-    "input_file": {}
-  },
-  {
-    "path": "posts/welcome/",
-    "title": "Welcome to Data Science Applications",
-    "description": {},
-    "author": [
-      {
-        "name": "Asher Hanson",
-        "url": "https://example.com/norajones"
-      }
-    ],
-    "date": "2021-09-21",
-    "categories": [],
-    "contents": "\n\n\n\n\n\n\n\n\n",
-    "preview": {},
-    "last_modified": "2021-09-29T17:24:42-06:00",
     "input_file": {}
   },
   {

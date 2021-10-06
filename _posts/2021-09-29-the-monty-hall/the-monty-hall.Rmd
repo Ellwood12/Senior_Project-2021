@@ -2,13 +2,13 @@
 title: "The Monty Hall"
 description: |
   Are you ready to put your luck to the test to try and win a new car?  As we explore the once great game, "Let Make a Deal", back from 1975, you will have the chance to see if you can crack the puzzle and win the prize.
+preview: ../../images/Logo.png
 date: 2021-09-29
 output:
   distill::distill_article:
     self_contained: false
 ---
 
-Image starts here
 
 <center>
 ![](../../images/Logo.png){width=60% height=60%}
@@ -40,6 +40,32 @@ Before I share some statistical knowledge to them game, lets run through it as i
 </center>
 
 
+# **Let's Play a Round**
 
+What would happen first, is Monty (the Host of the game show), would ask you to pick any door.  You would then pick any of the three cards. **Note, we are not going to flip over this card, but rather, save it for later.** Now, let's say you pick the left door to save because you think it has the Queen behind it.
+
+<center>
+![](../../images/Act_1.png){width=70%}
+</center>
+
+After picking which door to save, Monty would then show you a goat behind one of the other two doors.  Since two of the cards have goats on the other side, there will always be at least one card to flip over that has the goat.
+
+<center>
+![](../../images/Act_2.png){width=70%}
+</center>
+
+At this point, you know that the Queen is either behind the card you chose at the beginning or behind the card still face down.  Monty will then ask you, would you like to keep your card, or switch to the other one.  Which ever card you pick will be the card you end the game with, resulting in either a grand prize, or a goat. 
+
+In this example, you decide to test your luck and stay with the card you picked at the beginning.  Monty then flips over the cards to show that your card had the other goat.  Sadly, you lost the game and didn't get the prize.
+
+<center>
+![](../../images/Act_3.png){width=70%}
+</center>
+
+The concept of this game seems quite straightforward - pick a card and hope that you picked right.  But, there is little more than just luck at play in this game.  As this game was played more and more times, statisticans found that this game relid greatly upon the fundatmentals of probability.  
+In the next section, I will elaborate on how probabilty might hold the key to understand this game as well as winning the prize.
+
+
+# **The Probability Explained**
 
 
