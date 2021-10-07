@@ -6,14 +6,14 @@
       "description": "Some additional details about the blog",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2021-10-06T16:58:04-06:00"
+      "last_modified": "2021-10-07T16:22:46-06:00"
     },
     {
       "path": "index.html",
       "title": "Data Science Applications",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2021-10-06T16:58:05-06:00"
+      "last_modified": "2021-10-07T16:22:47-06:00"
     }
   ],
   "collections": ["posts/posts.json"]

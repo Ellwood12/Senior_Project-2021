@@ -11,4 +11,10 @@ output:
 
 ---
 
+<center>
+![](../../images/Park.png){width=60% height=60%}
+</center>
 
+# **Background**
+
+It is a beautiful afternoon and you are on your normal walk around the park.  After some time of walking, you decide to sit down and catch a breather.  While on a bench, you start up a conversation with a very nice lady who says she has come to the park with her two twin children.  During the conversation a little boy comes over and calls the lady, "Mom".  As the little boy is talking to his mother, you begin to wonder if the other twin child is also a boy or a girl.  After a few moments of thought, you realize that this question has more to do with probability that with biology.  What is the probability that the other child is a girl or boy?   
