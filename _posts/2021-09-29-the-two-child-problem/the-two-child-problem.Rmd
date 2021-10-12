@@ -33,7 +33,36 @@ And thanks to our knowledge of biology, this same statement applies.  The probab
 If we were to draw out all the combinations of twins, it would look something like the image below.
 
 <center>
-![](../../images/Gender_Combo.png){width=70%}
+![](../../images/Gender_Combo.png){width=90%}
 </center>
 
 In total, there are four possible combinations as drawn out in the image.  In each combination, there is a specific order that is important to note.  We will not use this plot to solve the question.
+
+# **Analysis**
+
+In the story, you find out that one of the woman's twins is a boy.  This will help us eliminate the possible outcome where both children are girls (image below).  The red circle is to demonstrate that we know at least one of the children is a boy for each possible combination.
+
+<center>
+![](../../images/boyCombo.png){width=90%}
+</center>
+
+Now, something important to note is that we were not told whether the boy was born first.  Because of that, we have to keep both combinations 3 and 4 even though they contain the same pieces in their combos.
+
+The next step will be to start adding some probability to each option.  In the figure below, the remaining combinations are shown with their probability above.  In each option, a male is covered with blue, telling us that we already know there is a male twin.  
+
+<center>
+![](../../images/Girl_Percent.png){width=90%}
+</center>
+
+As we see from the illustration above, of the combinations we have left, there is a 1/3 chance of each combination occuring.  At this point, we will combine probabilities of those with the same outcome.
+
+<center>
+![](../../images/End_Prob.png){width=90%}
+</center>
+
+With the aid of this last visual, we can see that there is a probability of 33% that the other twin is a boy and a 66% that the other twin is a girl.
+
+# **Conclusion**
+
+After a moment of thinking, you turn to the lady on the bench and ask, "I am just guessing here, but is your other child a girl?"  The lady responses with mild surprise, "Yes, have we meet before?"  You reply, "no", and tell her it was just a good guess.
+
