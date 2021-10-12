@@ -18,3 +18,22 @@ output:
 # **Background**
 
 It is a beautiful afternoon and you are on your normal walk around the park.  After some time of walking, you decide to sit down and catch a breather.  While on a bench, you start up a conversation with a very nice lady who says she has come to the park with her two twin children.  During the conversation a little boy comes over and calls the lady, "Mom".  As the little boy is talking to his mother, you begin to wonder if the other twin child is also a boy or a girl.  After a few moments of thought, you realize that this question has more to do with probability that with biology.  What is the probability that the other child is a girl or boy?   
+
+# **Probability Explained**
+
+Most people know that there is a fifty-fifty chance of getting tails when flipping coin.  This can be written out as:
+
+$$
+\text{------------------------------------------------}
+\\\text{Prob(tails) = 1/2} \\\text{------------------------------------------------}
+$$
+
+And thanks to our knowledge of biology, this same statement applies.  The probability of have a boy or girl is 50%.  So why then isn't the answer to the 'Twin Problem' just 50% girl and 50% boy?  It is because of possible combinations, which we will go over now. 
+
+If we were to draw out all the combinations of twins, it would look something like the image below.
+
+<center>
+![](../../images/Gender_Combo.png){width=70%}
+</center>
+
+In total, there are four possible combinations as drawn out in the image.  In each combination, there is a specific order that is important to note.  We will not use this plot to solve the question.
