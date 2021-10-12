@@ -2098,6 +2098,18 @@ document.addEventListener('DOMContentLoaded', function() {
 </center>
 <h1 id="background"><strong>Background</strong></h1>
 <p>It is a beautiful afternoon and you are on your normal walk around the park. After some time of walking, you decide to sit down and catch a breather. While on a bench, you start up a conversation with a very nice lady who says she has come to the park with her two twin children. During the conversation a little boy comes over and calls the lady, “Mom”. As the little boy is talking to his mother, you begin to wonder if the other twin child is also a boy or a girl. After a few moments of thought, you realize that this question has more to do with probability that with biology. What is the probability that the other child is a girl or boy?</p>
+<h1 id="probability-explained"><strong>Probability Explained</strong></h1>
+<p>Most people know that there is a fifty-fifty chance of getting tails when flipping coin. This can be written out as:</p>
+<p><span class="math display">\[
+\text{------------------------------------------------}
+\\\text{Prob(tails) = 1/2} \\\text{------------------------------------------------}
+\]</span></p>
+<p>And thanks to our knowledge of biology, this same statement applies. The probability of have a boy or girl is 50%. So why then isn’t the answer to the ‘Twin Problem’ just 50% girl and 50% boy? It is because of possible combinations, which we will go over now.</p>
+<p>If we were to draw out all the combinations of twins, it would look something like the image below.</p>
+<center>
+<img src="../../images/Gender_Combo.png" style="width:70.0%" />
+</center>
+<p>In total, there are four possible combinations as drawn out in the image. In each combination, there is a specific order that is important to note. We will not use this plot to solve the question.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
@@ -2106,6 +2118,15 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="d-appendix">
 </div>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 
 <!--radix_placeholder_site_after_body-->
 <!--/radix_placeholder_site_after_body-->
