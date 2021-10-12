@@ -1,13 +1,22 @@
 ---
 title: "The Birthday Paradox"
 description: |
-  Are birthday's all that random or is there a great chance that someone in the same room as you right now has the same birthday?  As we unravel this paradox, you will be suprised to find that chance of sharing the same special day, really isn't that surprising.
+  Are birthday's all random or is there a good chance that someone in the has the same birthday?  As we unravel this paradox, you will be suprised to find that the chance of sharing the same special day, really isn't that surprising.
 preview: ../../images/cake_pic.png
 date: 2018-09-29
 output:
   distill::distill_article:
     self_contained: false
 ---
+```{r}
+# https://ellwood12.github.io/data_science_blog/
+
+#https://statisticsbyjim.com/fun/birthday-problem/
+```
 
 
+<center>
+![](../../images/birthday_header.jpg){width=80%}
+</center>
 
+Remember going to elementary school on your birthday and being so excited?  Today, everyone is going to be part of 'YOUR' special day, what could go wrong?  And then, remember getting to class and finding out that it wasn't just your birthday, but in fact another person's in your class.  Really! Someone else just happens to share the same birthday as you, even with 365 days of the year.  Well, in today's post we are going to uncover the probability of this occuring in any group size.
