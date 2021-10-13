@@ -42,9 +42,9 @@
     "author": [],
     "date": "2018-09-29",
     "categories": [],
-    "contents": "\n\n\n# https://ellwood12.github.io/data_science_blog/\n\n#https://statisticsbyjim.com/fun/birthday-problem/\n\n\n\n\n\nRemember going to elementary school on your birthday and being so excited? Today, everyone is going to be part of ‘YOUR’ special day, what could go wrong? And then, remember getting to class and finding out that it wasn’t just your birthday, but in fact another person’s in your class. Really! Someone else just happens to share the same birthday as you, even with 365 days of the year. Well, in today’s post we are going to uncover the probability of this occuring in any group size.\n\n\n\n",
+    "contents": "\n\n\n# https://ellwood12.github.io/data_science_blog/\n\n#https://statisticsbyjim.com/fun/birthday-problem/\n\n\n\n\n\nBackground\nRemember going to elementary school on your birthday and being so excited? Today, everyone is going to be part of ‘YOUR’ special day, what could go wrong? And then, remember getting to class and finding out that it wasn’t just your birthday, but in fact another person’s in your class. Really! Someone else just happens to share the same birthday as you, even with 365 days of the year. Well, in today’s post we are going to uncover the probability of this occuring in any group size.\n\n\n\n",
     "preview": "posts/2021-09-29-the-birthday-paradox/../../images/cake_pic.png",
-    "last_modified": "2021-10-12T11:30:33-06:00",
-    "input_file": "first-new-post.knit.md"
+    "last_modified": "2021-10-13T16:18:49-06:00",
+    "input_file": {}
   }
 ]
