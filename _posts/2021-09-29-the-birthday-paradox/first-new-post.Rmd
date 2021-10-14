@@ -22,3 +22,57 @@ output:
 # **Background**
 
 Remember going to elementary school on your birthday and being so excited?  Today, everyone is going to be part of 'YOUR' special day, what could go wrong?  And then, remember getting to class and finding out that it wasn't just your birthday, but in fact another person's in your class.  Really! Someone else just happens to share the same birthday as you, even with 365 days of the year.  Well, in today's post we are going to uncover the probability of this occuring in any group size.
+
+```{r, warning=FALSE, message=FALSE}
+
+library(tidyverse)
+library(plotly)
+
+x_range = seq(1:71)
+inputs = (0:71)
+
+ratio = 0
+answer = 0
+
+for (i in inputs) {
+  ratio[i + 1] = (365 - i)/365
+}
+
+for (i in inputs) {
+  answer[i] = prod(ratio[1:i])
+}
+
+final = 1 - answer
+df = data.frame(x_range, final)
+
+
+```
+
+```{r, warning=FALSE, message=FALSE}
+
+```
+
+```{r, warning=FALSE, message=FALSE}
+
+graph = ggplot(data = df, aes(x = x_range, y = final, group = 1 ,text = paste(
+                            "Number of People: ", x_range, "\n",
+                                      "Probability: ", round((final * 100),1), "%"))) +
+  geom_line(aes(x = x_range, y = final), colour = "blue") + 
+ # geom_point(aes(x=23, y=.50), data=df, size=3, shape=1, color="red")+
+  geom_hline(yintercept=.501, linetype="dashed", color = "red")+
+  labs(title = "What are the Chances of a Shared Birthday?",
+       y = "Probability",
+       x = "Number of People") +
+  theme_bw() + 
+  scale_y_continuous(labels = scales::percent) +
+  theme(plot.title = element_text(hjust = 0.5)) + scale_x_continuous(breaks = scales::breaks_width(10))
+
+ggplotly(graph, tooltip = "text") %>% config(displayModeBar = F)
+
+
+```
+
+```{r}
+
+```
+
