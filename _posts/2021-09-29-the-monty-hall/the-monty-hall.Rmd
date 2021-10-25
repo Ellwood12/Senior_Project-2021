@@ -104,3 +104,95 @@ This means that my switching cards, we go from a 33% chance of having the Queen,
 
 Now wasn't that fun! From this game, we were able to discover the probability secret to raising our chances of Winning the Prize!  To recap what we discovered, when playing this game, when asked if you want to switch your card at the end, SAY YES!
 
+```{r setup, include=FALSE}
+library(tidyverse)
+library(gganimate)
+library(scales)
+set.seed(11424)
+
+options = c('g', 'q', 'g')
+my_list = list()
+n = 400
+
+for (i in seq(1:n)) {
+  rand = sample(options)
+  my_list[[i]] = rand
+}
+
+df = data.frame(my_list)
+df = t(df)
+df = data.frame(df)
+rownames(df) <- 1:nrow(df)
+
+dat = df$X1
+dat = data.frame(dat)
+row.names(dat) <- NULL
+names(dat)[names(dat) == 'dat'] <- 'Door_1'
+
+f_data = dat %>% 
+  mutate(Door_2 = case_when(dat == "g" ~ "q",
+                           dat =="q" ~ "g"))
+```
+
+```{r}
+
+fdat <- f_data %>% 
+  mutate(running_total_queens = case_when(Door_2 == "q" ~ TRUE,
+                                          Door_2 == "g" ~ FALSE)) %>% 
+  mutate(running_total_goats = case_when(Door_2 == "g" ~ TRUE,
+                                         Door_2 == "q" ~ FALSE)) %>% 
+  mutate(cum_sum_queen = cumsum(running_total_queens)) %>% 
+  mutate(cum_sum_goats = cumsum(running_total_goats))
+fdat$Round <- 1:nrow(fdat)
+```
+
+```{r}
+clean = fdat %>% select(c("Round", "cum_sum_queen","cum_sum_goats"))
+
+cdat <- clean %>% 
+  mutate(Queen_Percent = round(cum_sum_queen/Round,2)*100) %>% 
+  mutate(Goat_Percent = round(cum_sum_goats/Round,2)*100)
+
+```
+
+
+```{r}
+
+#########
+# GRAPH #
+#########
+library(plotly)
+
+
+p=(cdat %>% ggplot() + 
+  geom_line(data = cdat, aes(x = Round, y = Queen_Percent), color = "red3", size = 1.5) +
+  geom_line(data = cdat,aes(x = Round, y = Goat_Percent), color = "grey", size = 1.5) +
+  labs(x = "Number of Rounds Played",
+       y = "Percent Wins per Round (%)",
+       title = "Proof of Winning Strategy") +
+  theme_bw() +
+  theme(plot.title = element_text(
+    hjust = 0.5, face = "bold", size = 20)) +
+  theme(axis.text = element_text(face = "bold", size = 10),
+        axis.title = element_text(face = "bold", size = 12)) +
+scale_x_continuous(breaks = scales::breaks_width(n/5)))+ 
+  geom_hline(yintercept= (66.6), linetype="dashed", color = "black")+ 
+  geom_hline(yintercept= (33.3), linetype="dashed", color = "black")
+
+ggplotly(p, dynamicTicks = TRUE) %>%
+  layout(hovermode = "x") %>% 
+  config(displayModeBar = F)
+
+
+```
+
+```{r}
+
+```
+
+
+
+
+
+
+

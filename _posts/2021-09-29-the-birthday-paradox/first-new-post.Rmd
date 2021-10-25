@@ -14,7 +14,6 @@ output:
 #https://statisticsbyjim.com/fun/birthday-problem/
 ```
 
-
 <center>
 ![](../../images/birthday_header.jpg){width=60% height=60%}
 </center>
@@ -50,15 +49,9 @@ df = data.frame(x_range, final)
 
 ```{r, warning=FALSE, message=FALSE}
 
-```
-
-```{r, warning=FALSE, message=FALSE}
-
-graph = ggplot(data = df, aes(x = x_range, y = final, group = 1 ,text = paste(
-                            "Number of People: ", x_range, "\n",
-                                      "Probability: ", round((final * 100),1), "%"))) +
+graph = ggplot(data = df, aes(x = x_range, y = final, group = 1 ,text = paste("Number of People: ", x_range, "\n",
+                "Probability: ",round((final * 100),1), "%"))) +
   geom_line(aes(x = x_range, y = final), colour = "blue") + 
- # geom_point(aes(x=23, y=.50), data=df, size=3, shape=1, color="red")+
   geom_hline(yintercept=.501, linetype="dashed", color = "red")+
   labs(title = "What are the Chances of a Shared Birthday?",
        y = "Probability",
@@ -72,7 +65,4 @@ ggplotly(graph, tooltip = "text") %>% config(displayModeBar = F)
 
 ```
 
-```{r}
-
-```
 
