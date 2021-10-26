@@ -11,7 +11,7 @@ output:
 ```{r}
 # https://ellwood12.github.io/data_science_blog/
 
-#https://statisticsbyjim.com/fun/birthday-problem/
+# https://statisticsbyjim.com/fun/birthday-problem/
 ```
 
 <center>
@@ -52,7 +52,7 @@ df = data.frame(x_range, final)
 graph = ggplot(data = df, aes(x = x_range, y = final, group = 1 ,text = paste("Number of People: ", x_range, "\n",
                 "Probability: ",round((final * 100),1), "%"))) +
   geom_line(aes(x = x_range, y = final), colour = "blue") + 
-  geom_hline(yintercept=.501, linetype="dashed", color = "red")+
+  geom_hline(yintercept=.501, linetype="dashed", color = "red") +
   labs(title = "What are the Chances of a Shared Birthday?",
        y = "Probability",
        x = "Number of People") +

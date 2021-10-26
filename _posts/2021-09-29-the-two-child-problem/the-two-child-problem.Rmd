@@ -66,3 +66,78 @@ With the aid of this last visual, we can see that there is a probability of 33% 
 
 After a moment of thinking, you turn to the lady on the bench and ask, "I am just guessing here, but is your other child a girl?"  The lady responses with mild surprise, "Yes, have we meet before?"  You reply, "no", and tell her it was just a good guess.
 
+```{r setup, include=FALSE}
+library(tidyverse)
+library(gganimate)
+
+options = c("b", "g")
+list1 = list()
+list2 = list()
+epochs = 50
+
+for (i in seq(1:epochs)) {
+  rand = sample(options,1, replace = TRUE)
+  rand2 = sample(options,1, replace = TRUE)
+  list1[[i]] = rand
+  list2[[i]] = rand2
+}
+
+df1 = data.frame(list1)
+df1 = t(df1)
+df1 = data.frame(df1)
+rownames(df1) <- 1:nrow(df1)
+
+df2 = data.frame(list2)
+df2 = t(df2)
+df2 = data.frame(df2)
+rownames(df2) <- 1:nrow(df2)
+
+total = data.frame(df1, df2)
+
+data = total %>% 
+  mutate(Girl = case_when(df1 == df2 ~ FALSE,
+                           df1 != df2 ~ TRUE)) %>% 
+   mutate(Boy = case_when(df1 == df2 ~ TRUE,
+                           df1 != df2 ~ FALSE))
+  
+data = data %>% filter((df1 != 'g' | df2 != 'g'))
+
+data = data %>% mutate(Girl_Count = cumsum(Girl)) %>% mutate(Boy_Count = cumsum(Boy))
+data$Round <- 1:nrow(data)
+
+dat = data %>% select(c("Round", "Girl_Count", "Boy_Count")) %>% mutate(G_Gender = "Girl") %>% mutate(B_Gender = "Boy")
+
+dgirl = dat %>% select(c("Round", "G_Gender", "Girl_Count")) %>% 
+  mutate(Gender = G_Gender) %>% 
+  mutate(Count = Girl_Count) %>% 
+  select(c("Round","Gender","Count"))
+
+dboy = dat %>% select(c("Round", "B_Gender", "Boy_Count")) %>% 
+  mutate(Gender = B_Gender) %>% 
+  mutate(Count = Boy_Count) %>% 
+  select(c("Round","Gender","Count"))
+
+at = rbind(dgirl, dboy)
+
+good = at %>% mutate(Percent = round(Count/Round,2))
+
+```
+
+
+```{r}
+
+good %>% ggplot(aes(x = Gender, y = Percent, fill = Gender)) + 
+  geom_col() +
+  transition_time(Round) +
+  #labs(title = good$Round) +
+  theme_bw() +
+  scale_fill_manual(values = c("deepskyblue", "purple")) + 
+  geom_hline(yintercept = .666, linetype = "dashed", color = "black") + 
+  geom_hline(yintercept = .333, linetype = "dashed", color = "black") +
+  scale_y_continuous(labels = scales::percent) +
+  labs(title = "Number of Rounds Played: {frame_time}",
+       x = "Gender",
+       y = "Chance of Child Being that Gender") +
+  theme(plot.title = element_text(hjust = 0.5, size = 28)) 
+
+```
