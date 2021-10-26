@@ -1,5 +1,5 @@
 ---
-title: "The Twin Problem"
+title: "The Twin Puzzle"
 description: |
   When given the chance to guess the gender of a child, is it
   as easy at fifty-fifty, or is there some deeper probability at hand?  In this problem, we explore the probability of guessing the gender of a twin when we are told the gender of one.
