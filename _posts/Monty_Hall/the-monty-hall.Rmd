@@ -11,9 +11,6 @@ output:
 
 <center>
 
-![](../../_posts/Monty_Hall/Images/New_Logo.png){width=60% height=60%}
-
-
 ![](../../images/Logo.png){width=60% height=60%}
 
 </center>

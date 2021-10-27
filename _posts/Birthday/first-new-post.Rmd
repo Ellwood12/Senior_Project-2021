@@ -10,8 +10,6 @@ output:
 ---
 ```{r}
 # https://ellwood12.github.io/data_science_blog/
-
-# https://statisticsbyjim.com/fun/birthday-problem/
 ```
 
 <center>
