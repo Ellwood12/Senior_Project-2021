@@ -2,18 +2,12 @@
 title: "The Monty Hall"
 description: |
   Are you ready to put your luck to the test to try and win a new car?  As we explore the once great game, "Let Make a Deal", back from 1975, you will have the chance to see if you can crack the puzzle and win the prize.
-preview: ../../images/Logo.png
+preview: ../../images/Attempt2.png
 date: 2021-09-29
 output:
   distill::distill_article:
     self_contained: false
 ---
-
-<center>
-
-![](../../images/Logo.png){width=60% height=60%}
-
-</center>
 
 <center>
 
@@ -30,14 +24,11 @@ On the show, there was a particular game that was played that has since then bec
 Before I share some statistical knowledge to them game, lets run through it as if we were contestants.  Instead of playing behind three doors, we will play with playing cards that either have a goat or a queen.  As in the image below, there are there are two possible outcomes, a goat or a queen.
 
 <center>
+
 ## **Face Down**
-</center>
-
-
-<center>
-![](../../images/Face_Down.png){width=55%}
 
 </center>
+
 
 <center>
 
