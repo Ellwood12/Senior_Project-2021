@@ -1,9 +1,27 @@
 ---
-title: "Applications of Statistics in the World"
+title: "Here I am!"
 description: |
-  Some additional details about the blog
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+```{r, include=FALSE}
+# https://ellwood12.github.io/data_science_blog/
+
+# https://www.braingle.com/brainteasers/teaser.php?op=2&id=16401&comm=0
 ```
+
+Hello Everyone!
+
+I am that one guy who finds computing statistics super interesting (and you must also because you made it to my web site).
+
+Probability started off feeling like a foreign concept couldn't be explained because of how strange the results always turned.  I felt this way until I started dabbling in creating random samples in programming softwares.  Thanks to computers, we have the power to generate random samples at large amounts to create data needed for many experiments.
+
+I chose to focus on Probability as my Senior Project because of the important applications that are required to be a good Data Scientist.  
+
+1. Being able to explain a problem to anyone.  Over the course of my degree, I have tried many times to explain my knowledge to friends and family with little success.  This changed once I was able to change the question I was trying to tackle with story that anyone could follow.
+
+2. Learning to Explain Math.  Not very many people like to open text books and try self teach.  I always appreciated the text books that went step by step, with examples and notes to follow the author.  
+
+3. Using programming to explain provide visuals and insights into the data.  For all of my blogs, I started off thinking, "1. What is my data, and 2. How do I want it to look?"  Sometimes I knew the visual I wanted to create, while other times, the layout of my data changed the direction I was headed.
+
+Hopefully everyone finds these stories insightful and entertaining!
+ 

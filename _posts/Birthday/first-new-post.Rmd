@@ -3,17 +3,16 @@ title: "The Birthday Paradox"
 description: |
   Are birthday's all random or is there a good chance that someone in the has the same birthday?  As we unravel this paradox, you will be suprised to find that the chance of sharing the same special day, really isn't that surprising.
 preview: ../../images/cake_pic.png
-date: 2018-09-29
+date: 2021-09-29
 output:
   distill::distill_article:
     self_contained: false
+    
 ---
-```{r}
-# https://ellwood12.github.io/data_science_blog/
-```
 
 <center>
-![](../../images/birthday_header.jpg){width=60% height=60%}
+
+![](../../images/birthday_header.jpg){width=60% height=85%}
 </center>
 
 # **Background**
@@ -80,6 +79,7 @@ As more students enter the classroom, the probability of sharing a birthday will
 
 library(tidyverse)
 library(plotly)
+library(ggplot2)
 
 x_range = seq(1:71)
 inputs = (0:71)
@@ -103,16 +103,19 @@ df = data.frame(x_range, final)
 
 ```{r, warning=FALSE, message=FALSE}
 
-graph = ggplot(data = df, aes(x = x_range, y = final, group = 1 ,text = paste("Number of People: ", x_range, "\n",
+graph = ggplot(data = df, 
+               aes(x = x_range, y = final, group = 1 ,
+                   text = paste("Number of People: ", x_range, "\n",
                 "Probability: ",round((final * 100),1), "%"))) +
   geom_line(aes(x = x_range, y = final), colour = "blue") + 
-  geom_hline(yintercept=.501, linetype="dashed", color = "red") +
+  geom_hline(yintercept = .501, linetype = "dashed", color = "red") +
   labs(title = "What are the Chances of a Shared Birthday?",
        y = "Probability",
        x = "Number of People") +
   theme_bw() + 
   scale_y_continuous(labels = scales::percent) +
-  theme(plot.title = element_text(hjust = 0.5)) + scale_x_continuous(breaks = scales::breaks_width(10))
+  theme(plot.title = element_text(hjust = 0.5)) + 
+  scale_x_continuous(breaks = scales::breaks_width(10))
 
 ggplotly(graph, tooltip = "text") %>% config(displayModeBar = F)
 
