@@ -6,7 +6,6 @@ description: |
 ```{r, include=FALSE}
 # https://ellwood12.github.io/data_science_blog/
 
-# https://www.braingle.com/brainteasers/teaser.php?op=2&id=16401&comm=0
 ```
 
 Hello Everyone!

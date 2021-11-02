@@ -1,0 +1,40 @@
+---
+title: "Tea Tasting"
+description: |
+  In this blog, we will investigate an experiment done on a women who thought she could tell whether milk had been put into a cup before or after tea. As we analyze this story, we will be introduced to statistic tools which include hypotheses and p-values. 
+preview: ../../images/tea_lady.png  
+date: 2021-10-29
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+<center>
+
+![](../../images/Lady_Tea.png){width=50% height=50%}
+
+</center>
+
+# **Background** 
+
+One of the first fathers' of statistics was named Ronald Fisher.  He is widely known for his research in statistic methods and design of experiments.  In one of his books, he gives a lesson on probability and statistics; which according to some sources, was based on a true event.
+
+On a calm, pleasant day at a cafe, an argument broke out between a lady and a waiter.  The lady was very upset with her order of tea, which consisted only of milk and tea.  Now, little history about tea, during this time period it was common practice to pour tea first and then milk. Well, our customer lady was upset because she claimed that the tea that given was made in the wrong order - (milk then tea).
+
+Fisher, the statistician, goes on to explain ideas on how we could test whether or not this lady's accusation is correct.  In his proposed test, he said to offer the lady 8 cups of tea, 4 of them being milk then tea, and the other 4, tea then milk.  She would be told that 4 of them were prepared in the "proper" way and that her task was to correctly label them.  With all of this in mind, we can dive into the analysis of what is happening.
+
+# **Analysis**
+
+To start off this experiment, we need set up our hypotheses.  In general, a hypothesis is a statement about a possible outcome. We start with a null hypothesis and an alternative. The null hypothesis normal states what is generally already believed/accepted; while the alternative states a possible outcome that differs from the already accepted.  So for this experiment:
+
+$$
+H_0 (null):\text{Lady can distingish the two different types}\\  
+H_a (alternative): \text{Lady can not distingish the two different types}
+$$
+
+<center>
+
+![](../../images/coffee_pic.png){width=80% height=80%}
+
+
+</center>
