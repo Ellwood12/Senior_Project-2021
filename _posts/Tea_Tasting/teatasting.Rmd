@@ -1,7 +1,7 @@
 ---
 title: "Tea Tasting"
 description: |
-  In this blog, we will investigate an experiment done on a women who thought she could tell whether milk had been put into a cup before or after tea. As we analyze this story, we will be introduced to statistic tools which include hypotheses and p-values. 
+  In this blog, we will investigate an experiment done on a lady who thought she could tell whether milk had been put into a cup tea before or after the tea. As we analyze this story, we will be introduced to statistical tools which include hypotheses and p-values. 
 preview: ../../images/tea_lady.png  
 date: 2021-10-29
 output:
@@ -9,11 +9,20 @@ output:
     self_contained: false
 ---
 
+```{r, include=FALSE}
+library(tidyverse)
+library(pander)
+
+```
+
+
 <center>
 
 ![](../../images/Lady_Tea.png){width=50% height=50%}
 
 </center>
+
+#https://wiki.uio.no/projects/clsi/images/6/65/3BasicStatisticalTestingInR-2014-2.pdf
 
 # **Background** 
 
@@ -25,16 +34,111 @@ Fisher, the statistician, goes on to explain ideas on how we could test whether 
 
 # **Analysis**
 
-To start off this experiment, we need set up our hypotheses.  In general, a hypothesis is a statement about a possible outcome. We start with a null hypothesis and an alternative. The null hypothesis normal states what is generally already believed/accepted; while the alternative states a possible outcome that differs from the already accepted.  So for this experiment:
+To start off this experiment, we need set up our hypotheses.  In general, a hypothesis is a statement about a possible outcome that is predicted to occur. We start with a null and alternative hypothesis. The null hypothesis states what is generally believed/accepted; while the alternative states a possible outcome that differs from the already accepted.  So for this experiment:
 
 $$
-H_0 (null):\text{Lady can distingish the two different types}\\  
-H_a (alternative): \text{Lady can not distingish the two different types}
+H_0 (null):\text{Lady can not distingish the two different types}\\  
+H_a (alternative): \text{Lady can distingish the two different types}
 $$
 
 <center>
+
+
 
 ![](../../images/coffee_pic.png){width=80% height=80%}
 
 
 </center>
+
+The next factor we get to decide is at what point are we confortable with saying, "this Lady can indeed, taste the difference between the two types".  In statistics, we call this alpha.  And for this experiment and in common statistic practice, we are going to set alpha equal to 0.05.
+
+$$
+\alpha = 0.05\\
+$$
+
+Now that we have established our hypotheses and alpha, we can now begin our experiment.  To find answers to our experiment, we are going to perfrom an Exact Bionomial Test.  This test does well in counting the number of success compared to the number of failures.  In this experiment, we have 8 total cups with 2 groups of different tea preparation styles.  For each cup, she has 2 choices, giving her a 50% chance of being correct. 
+
+Using r-studio, we are going to use the binomial test to find out what the p-values would be based on how many cups she could identify correctly.  
+
+The following sections tell us what the p-values would be for each test.
+
+<center>
+# **Tests**
+</center>
+
+<center>
+## **6 Cups Correct**
+</center>
+
+To calculate the p-values of getting 6-8 cups corrects, we are going to do the following:
+
+$$
+\text{P(X} \ge 6| H_0 = \text{true)}\\ 
+\text{= P(X = 6| p = 0.5) + P(X = 7| p = 0.5) + P(X = 8| p = 0.5)}
+$$
+
+The following graph helps us visualize what that this math looks like.  It is done by drawing out a Binomial Distribution and then highlighting the areas we are intesesting to solving.  The equation to that math is:
+
+$$
+P(X=x) = \binom{8}{x}  p^x(1-p)^{8-x}
+$$
+
+Our actual value is listed below.
+
+```{r, warning=FALSE}
+pp = (plot(0:8, dbinom(0:8, 8, 0.5), type = 'h',
+     lwd = 5,col = c(rep(1,6), 
+                     rep(2,3)), 
+     main = "Binomial probability function",
+     ylab = "P(X = x)", xlab = "Number of successes"))
+```
+
+The p-value for 6-8 success is:
+
+```{r, include=FALSE}
+pander(sum(dbinom(6:8,8,0.5)))
+```
+
+Now, at the beginning of this test, we decided we wanted an alpha of 0.05.
+Well, 0.1445 > 0.05, which means if the lady was only able to identify 6 of the cups correctly, we would fail to reject the null hypothesis, meaning we do not believe she can taste the difference.
+
+<center>
+## **7 Cups Correct**
+</center>
+
+
+```{r, warning=FALSE}
+plot(0:8, dbinom(0:8, 8, 0.5), type = 'h',
+     lwd = 5,col = c(rep(1,7),
+                     rep(2,3)),
+     main = "Binomial probability function",
+     ylab = "P(X = x)", xlab = "Number of successes")
+```
+
+```{r}
+sum(dbinom(7:8,8,0.5))
+```
+
+<center>
+## **8 Cups Correct**
+</center>
+
+```{r, warning=FALSE}
+plot(0:8, dbinom(0:8, 8, 0.5), type = 'h',
+     lwd = 5,col = c(rep(1,8),
+                     rep(2,3)),
+     main = "Binomial probability function",
+     ylab = "P(X = x)", xlab = "Number of successes")
+
+sum(dbinom(8,8,0.5))
+```
+
+```{r, warning=FALSE, include=FALSE}
+#binom.test(8,8,alternative="greater")
+#data = dbinom(0:8, 8, 0.5)
+#sum(dbinom(7:8,8,0.5))
+```
+
+
+
+
