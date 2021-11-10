@@ -22,7 +22,6 @@ library(pander)
 
 </center>
 
-#https://wiki.uio.no/projects/clsi/images/6/65/3BasicStatisticalTestingInR-2014-2.pdf
 
 # **Background** 
 
@@ -70,14 +69,19 @@ The following sections tell us what the p-values would be for each test.
 ## **6 Cups Correct**
 </center>
 
-To calculate the p-values of getting 6-8 cups corrects, we are going to do the following:
+To calculate the p-values of getting 6 cups corrects, we are going to do the following:
 
 $$
-\text{P(X} \ge 6| H_0 = \text{true)}\\ 
-\text{= P(X = 6| p = 0.5) + P(X = 7| p = 0.5) + P(X = 8| p = 0.5)}
+\text{P(X} > 6| H_0 = \text{true)}\
+\text{= P(X = 6| p = 0.5)}
 $$
+```{r, include=FALSE}
+#+ P(X = 7| p = 0.5) + P(X = 8| p = 0.5)}
+```
 
-The following graph helps us visualize what that this math looks like.  It is done by drawing out a Binomial Distribution and then highlighting the areas we are intesesting to solving.  The equation to that math is:
+
+
+The following graph helps us visualize what that this math looks like.  It is done by drawing out a Binomial Distribution and then highlighting the areas we are intesesting in solving.  The equation to this math is:
 
 $$
 P(X=x) = \binom{8}{x}  p^x(1-p)^{8-x}
@@ -87,58 +91,87 @@ Our actual value is listed below.
 
 ```{r, warning=FALSE}
 pp = (plot(0:8, dbinom(0:8, 8, 0.5), type = 'h',
-     lwd = 5,col = c(rep(1,6), 
-                     rep(2,3)), 
-     main = "Binomial probability function",
+     lwd = 9,col = c(rep(1,6), 
+                     rep(2)), 
+     main = "Binomial Probability",
      ylab = "P(X = x)", xlab = "Number of successes"))
 ```
 
-The p-value for 6-8 success is:
+The p-value for 6 successes is:
 
 ```{r, include=FALSE}
-pander(sum(dbinom(6:8,8,0.5)))
+pander(sum(dbinom(7,8,0.5)))
 ```
 
 Now, at the beginning of this test, we decided we wanted an alpha of 0.05.
-Well, 0.1445 > 0.05, which means if the lady was only able to identify 6 of the cups correctly, we would fail to reject the null hypothesis, meaning we do not believe she can taste the difference.
+Well, 0.1094 > 0.05, which means if the lady was only able to identify 6 of the cups correctly, we would fail to reject the null hypothesis, meaning we do not believe she can taste the difference.
 
 <center>
 ## **7 Cups Correct**
 </center>
 
+$$
+\text{P(X} > 7| H_0 = \text{true)}\
+\text{= P(X = 7| p = 0.5)}
+$$
 
 ```{r, warning=FALSE}
 plot(0:8, dbinom(0:8, 8, 0.5), type = 'h',
-     lwd = 5,col = c(rep(1,7),
-                     rep(2,3)),
-     main = "Binomial probability function",
+     lwd = 9,col = c(rep(1,7), rep(2)),
+     main = "Binomial Probability",
      ylab = "P(X = x)", xlab = "Number of successes")
 ```
 
-```{r}
-sum(dbinom(7:8,8,0.5))
+The p-value for 7 Cups Correct is 0.03125, and 0.03125 < 0.05.  This means that if she were to successfully identify 7 of the 8 cups correctly, we would have sufficient evidence to suggest that she can indeed taste the difference between Tea Types.
+
+```{r, include=FALSE}
+sum(dbinom(7,8,0.5)) %>% pander()
 ```
 
 <center>
 ## **8 Cups Correct**
 </center>
 
+$$
+\text{P(X} > 8| H_0 = \text{true)}\
+\text{= P(X = 8| p = 0.5)}
+$$
+
 ```{r, warning=FALSE}
 plot(0:8, dbinom(0:8, 8, 0.5), type = 'h',
-     lwd = 5,col = c(rep(1,8),
+     lwd = 9,col = c(rep(1,8),
                      rep(2,3)),
-     main = "Binomial probability function",
+    main = "Binomial Probability",
      ylab = "P(X = x)", xlab = "Number of successes")
-
-sum(dbinom(8,8,0.5))
 ```
 
-```{r, warning=FALSE, include=FALSE}
-#binom.test(8,8,alternative="greater")
-#data = dbinom(0:8, 8, 0.5)
-#sum(dbinom(7:8,8,0.5))
+And lastly, we have if she were to identify all 8 cups correctly, her value would be 0.003906, which is < 0.05.  With this value, we can say we evidence to suggest that the lady can indeed taste the difference between teh two types of tea.
+
+```{r, include=FALSE}
+sum(dbinom(8,8,0.5)) %>% pander()
 ```
 
+
+```{r}
+
+data.frame(heads = 0:8, 
+           pmf = dbinom(x = 0:8, size = 8, prob = 0.5)) %>%
+ggplot(aes(x = factor(heads), y = pmf, fill = factor(pmf))) +
+  geom_col() +
+  geom_text(
+    aes(label = round(pmf,3), y = pmf + 0.01),
+    position = position_dodge(0.9),
+    size = 3,
+    vjust = 0
+  ) +
+  labs(title = "Probability of X = x successes.",
+       x = "Successes (x)",
+       y = "Probability") +
+  theme_bw() + 
+  theme(legend.position = "none") + scale_fill_brewer(palette = "Dark1") +
+  theme(plot.title = element_text(
+    hjust = 0.5, face = "bold", size = 20))
+```
 
 
 

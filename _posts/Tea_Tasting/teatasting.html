@@ -114,7 +114,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["teatasting_files/anchor-4.2.2/anchor.min.js","teatasting_files/bowser-1.9.3/bowser.min.js","teatasting_files/distill-2.2.21/template.v2.js","teatasting_files/figure-html5/unnamed-chunk-1-1.png","teatasting_files/figure-html5/unnamed-chunk-2-1.png","teatasting_files/figure-html5/unnamed-chunk-3-1.png","teatasting_files/figure-html5/unnamed-chunk-4-1.png","teatasting_files/figure-html5/unnamed-chunk-5-1.png","teatasting_files/figure-html5/unnamed-chunk-6-1.png","teatasting_files/jquery-3.6.0/jquery-3.6.0.js","teatasting_files/jquery-3.6.0/jquery-3.6.0.min.js","teatasting_files/jquery-3.6.0/jquery-3.6.0.min.map","teatasting_files/popper-2.6.0/popper.min.js","teatasting_files/tippy-6.2.7/tippy-bundle.umd.min.js","teatasting_files/tippy-6.2.7/tippy-light-border.css","teatasting_files/tippy-6.2.7/tippy.css","teatasting_files/tippy-6.2.7/tippy.umd.min.js","teatasting_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["teatasting_files/anchor-4.2.2/anchor.min.js","teatasting_files/bowser-1.9.3/bowser.min.js","teatasting_files/distill-2.2.21/template.v2.js","teatasting_files/figure-html5/unnamed-chunk-1-1.png","teatasting_files/figure-html5/unnamed-chunk-10-1.png","teatasting_files/figure-html5/unnamed-chunk-2-1.png","teatasting_files/figure-html5/unnamed-chunk-3-1.png","teatasting_files/figure-html5/unnamed-chunk-4-1.png","teatasting_files/figure-html5/unnamed-chunk-5-1.png","teatasting_files/figure-html5/unnamed-chunk-6-1.png","teatasting_files/figure-html5/unnamed-chunk-7-1.png","teatasting_files/figure-html5/unnamed-chunk-9-1.png","teatasting_files/jquery-3.6.0/jquery-3.6.0.js","teatasting_files/jquery-3.6.0/jquery-3.6.0.min.js","teatasting_files/jquery-3.6.0/jquery-3.6.0.min.map","teatasting_files/popper-2.6.0/popper.min.js","teatasting_files/tippy-6.2.7/tippy-bundle.umd.min.js","teatasting_files/tippy-6.2.7/tippy-light-border.css","teatasting_files/tippy-6.2.7/tippy.css","teatasting_files/tippy-6.2.7/tippy.umd.min.js","teatasting_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -1476,7 +1476,6 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <center>
 <p><img src="../../images/Lady_Tea.png" style="width:50.0%;height:50.0%" /></p>
 </center>
-<p>#<a href="https://wiki.uio.no/projects/clsi/images/6/65/3BasicStatisticalTestingInR-2014-2.pdf" class="uri">https://wiki.uio.no/projects/clsi/images/6/65/3BasicStatisticalTestingInR-2014-2.pdf</a></p>
 <h1 id="background"><strong>Background</strong></h1>
 <p>One of the first fathers’ of statistics was named Ronald Fisher. He is widely known for his research in statistic methods and design of experiments. In one of his books, he gives a lesson on probability and statistics; which according to some sources, was based on a true event.</p>
 <p>On a calm, pleasant day at a cafe, an argument broke out between a lady and a waiter. The lady was very upset with her order of tea, which consisted only of milk and tea. Now, little history about tea, during this time period it was common practice to pour tea first and then milk. Well, our customer lady was upset because she claimed that the tea that given was made in the wrong order - (milk then tea).</p>
@@ -1503,12 +1502,12 @@ H_a (alternative): \text{Lady can distingish the two different types}
 <center>
 <h2 id="cups-correct"><strong>6 Cups Correct</strong></h2>
 </center>
-<p>To calculate the p-values of getting 6-8 cups corrects, we are going to do the following:</p>
+<p>To calculate the p-values of getting 6 cups corrects, we are going to do the following:</p>
 <p><span class="math display">\[
-\text{P(X} \ge 6| H_0 = \text{true)}\\ 
-\text{= P(X = 6| p = 0.5) + P(X = 7| p = 0.5) + P(X = 8| p = 0.5)}
+\text{P(X} &gt; 6| H_0 = \text{true)}\
+\text{= P(X = 6| p = 0.5)}
 \]</span></p>
-<p>The following graph helps us visualize what that this math looks like. It is done by drawing out a Binomial Distribution and then highlighting the areas we are intesesting to solving. The equation to that math is:</p>
+<p>The following graph helps us visualize what that this math looks like. It is done by drawing out a Binomial Distribution and then highlighting the areas we are intesesting in solving. The equation to this math is:</p>
 <p><span class="math display">\[
 P(X=x) = \binom{8}{x}  p^x(1-p)^{8-x}
 \]</span></p>
@@ -1516,57 +1515,77 @@ P(X=x) = \binom{8}{x}  p^x(1-p)^{8-x}
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='va'>pp</span> <span class='op'>=</span> <span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/graphics/plot.html'>plot</a></span><span class='op'>(</span><span class='fl'>0</span><span class='op'>:</span><span class='fl'>8</span>, <span class='fu'><a href='https://rdrr.io/r/stats/Binomial.html'>dbinom</a></span><span class='op'>(</span><span class='fl'>0</span><span class='op'>:</span><span class='fl'>8</span>, <span class='fl'>8</span>, <span class='fl'>0.5</span><span class='op'>)</span>, type <span class='op'>=</span> <span class='st'>'h'</span>,
-     lwd <span class='op'>=</span> <span class='fl'>5</span>,col <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span><span class='op'>(</span><span class='fl'>1</span>,<span class='fl'>6</span><span class='op'>)</span>, 
-                     <span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span><span class='op'>(</span><span class='fl'>2</span>,<span class='fl'>3</span><span class='op'>)</span><span class='op'>)</span>, 
-     main <span class='op'>=</span> <span class='st'>"Binomial probability function"</span>,
+     lwd <span class='op'>=</span> <span class='fl'>9</span>,col <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span><span class='op'>(</span><span class='fl'>1</span>,<span class='fl'>6</span><span class='op'>)</span>, 
+                     <span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span><span class='op'>(</span><span class='fl'>2</span><span class='op'>)</span><span class='op'>)</span>, 
+     main <span class='op'>=</span> <span class='st'>"Binomial Probability"</span>,
      ylab <span class='op'>=</span> <span class='st'>"P(X = x)"</span>, xlab <span class='op'>=</span> <span class='st'>"Number of successes"</span><span class='op'>)</span><span class='op'>)</span>
 </code></pre>
 </div>
-<p><img src="teatasting_files/figure-html5/unnamed-chunk-2-1.png" width="624" /></p>
+<p><img src="teatasting_files/figure-html5/unnamed-chunk-3-1.png" width="624" /></p>
 </div>
-<p>The p-value for 6-8 success is:</p>
-<p>Now, at the beginning of this test, we decided we wanted an alpha of 0.05. Well, 0.1445 &gt; 0.05, which means if the lady was only able to identify 6 of the cups correctly, we would fail to reject the null hypothesis, meaning we do not believe she can taste the difference.</p>
+<p>The p-value for 6 successes is:</p>
+<p>Now, at the beginning of this test, we decided we wanted an alpha of 0.05. Well, 0.1094 &gt; 0.05, which means if the lady was only able to identify 6 of the cups correctly, we would fail to reject the null hypothesis, meaning we do not believe she can taste the difference.</p>
 <center>
 <h2 id="cups-correct-1"><strong>7 Cups Correct</strong></h2>
 </center>
+<p><span class="math display">\[
+\text{P(X} &gt; 7| H_0 = \text{true)}\
+\text{= P(X = 7| p = 0.5)}
+\]</span></p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/graphics/plot.html'>plot</a></span><span class='op'>(</span><span class='fl'>0</span><span class='op'>:</span><span class='fl'>8</span>, <span class='fu'><a href='https://rdrr.io/r/stats/Binomial.html'>dbinom</a></span><span class='op'>(</span><span class='fl'>0</span><span class='op'>:</span><span class='fl'>8</span>, <span class='fl'>8</span>, <span class='fl'>0.5</span><span class='op'>)</span>, type <span class='op'>=</span> <span class='st'>'h'</span>,
-     lwd <span class='op'>=</span> <span class='fl'>5</span>,col <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span><span class='op'>(</span><span class='fl'>1</span>,<span class='fl'>7</span><span class='op'>)</span>,
-                     <span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span><span class='op'>(</span><span class='fl'>2</span>,<span class='fl'>3</span><span class='op'>)</span><span class='op'>)</span>,
-     main <span class='op'>=</span> <span class='st'>"Binomial probability function"</span>,
+     lwd <span class='op'>=</span> <span class='fl'>9</span>,col <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span><span class='op'>(</span><span class='fl'>1</span>,<span class='fl'>7</span><span class='op'>)</span>, <span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span><span class='op'>(</span><span class='fl'>2</span><span class='op'>)</span><span class='op'>)</span>,
+     main <span class='op'>=</span> <span class='st'>"Binomial Probability"</span>,
      ylab <span class='op'>=</span> <span class='st'>"P(X = x)"</span>, xlab <span class='op'>=</span> <span class='st'>"Number of successes"</span><span class='op'>)</span>
 </code></pre>
 </div>
-<p><img src="teatasting_files/figure-html5/unnamed-chunk-4-1.png" width="624" /></p>
+<p><img src="teatasting_files/figure-html5/unnamed-chunk-5-1.png" width="624" /></p>
 </div>
-<div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/stats/Binomial.html'>dbinom</a></span><span class='op'>(</span><span class='fl'>7</span><span class='op'>:</span><span class='fl'>8</span>,<span class='fl'>8</span>,<span class='fl'>0.5</span><span class='op'>)</span><span class='op'>)</span>
-</code></pre>
-</div>
-<pre><code>[1] 0.03515625</code></pre>
-</div>
+<p>The p-value for 7 Cups Correct is 0.03125, and 0.03125 &lt; 0.05. This means that if she were to successfully identify 7 of the 8 cups correctly, we would have sufficient evidence to suggest that she can indeed taste the difference between Tea Types.</p>
 <center>
 <h2 id="cups-correct-2"><strong>8 Cups Correct</strong></h2>
 </center>
+<p><span class="math display">\[
+\text{P(X} &gt; 8| H_0 = \text{true)}\
+\text{= P(X = 8| p = 0.5)}
+\]</span></p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/graphics/plot.html'>plot</a></span><span class='op'>(</span><span class='fl'>0</span><span class='op'>:</span><span class='fl'>8</span>, <span class='fu'><a href='https://rdrr.io/r/stats/Binomial.html'>dbinom</a></span><span class='op'>(</span><span class='fl'>0</span><span class='op'>:</span><span class='fl'>8</span>, <span class='fl'>8</span>, <span class='fl'>0.5</span><span class='op'>)</span>, type <span class='op'>=</span> <span class='st'>'h'</span>,
-     lwd <span class='op'>=</span> <span class='fl'>5</span>,col <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span><span class='op'>(</span><span class='fl'>1</span>,<span class='fl'>8</span><span class='op'>)</span>,
+     lwd <span class='op'>=</span> <span class='fl'>9</span>,col <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span><span class='op'>(</span><span class='fl'>1</span>,<span class='fl'>8</span><span class='op'>)</span>,
                      <span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span><span class='op'>(</span><span class='fl'>2</span>,<span class='fl'>3</span><span class='op'>)</span><span class='op'>)</span>,
-     main <span class='op'>=</span> <span class='st'>"Binomial probability function"</span>,
+    main <span class='op'>=</span> <span class='st'>"Binomial Probability"</span>,
      ylab <span class='op'>=</span> <span class='st'>"P(X = x)"</span>, xlab <span class='op'>=</span> <span class='st'>"Number of successes"</span><span class='op'>)</span>
 </code></pre>
 </div>
-<img src="teatasting_files/figure-html5/unnamed-chunk-6-1.png" width="624" />
+<p><img src="teatasting_files/figure-html5/unnamed-chunk-7-1.png" width="624" /></p>
+</div>
+<p>And lastly, we have if she were to identify all 8 cups correctly, her value would be 0.003906, which is &lt; 0.05. With this value, we can say we evidence to suggest that the lady can indeed taste the difference between teh two types of tea.</p>
+<div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/stats/Binomial.html'>dbinom</a></span><span class='op'>(</span><span class='fl'>8</span>,<span class='fl'>8</span>,<span class='fl'>0.5</span><span class='op'>)</span><span class='op'>)</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span><span class='op'>(</span>heads <span class='op'>=</span> <span class='fl'>0</span><span class='op'>:</span><span class='fl'>8</span>, 
+           pmf <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/Binomial.html'>dbinom</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='fl'>0</span><span class='op'>:</span><span class='fl'>8</span>, size <span class='op'>=</span> <span class='fl'>8</span>, prob <span class='op'>=</span> <span class='fl'>0.5</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
+<span class='fu'>ggplot</span><span class='op'>(</span><span class='fu'>aes</span><span class='op'>(</span>x <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>heads</span><span class='op'>)</span>, y <span class='op'>=</span> <span class='va'>pmf</span>, fill <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>pmf</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>geom_col</span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>geom_text</span><span class='op'>(</span>
+    <span class='fu'>aes</span><span class='op'>(</span>label <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span><span class='op'>(</span><span class='va'>pmf</span>,<span class='fl'>3</span><span class='op'>)</span>, y <span class='op'>=</span> <span class='va'>pmf</span> <span class='op'>+</span> <span class='fl'>0.01</span><span class='op'>)</span>,
+    position <span class='op'>=</span> <span class='fu'>position_dodge</span><span class='op'>(</span><span class='fl'>0.9</span><span class='op'>)</span>,
+    size <span class='op'>=</span> <span class='fl'>3</span>,
+    vjust <span class='op'>=</span> <span class='fl'>0</span>
+  <span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>labs</span><span class='op'>(</span>title <span class='op'>=</span> <span class='st'>"Probability of X = x successes."</span>,
+       x <span class='op'>=</span> <span class='st'>"Successes (x)"</span>,
+       y <span class='op'>=</span> <span class='st'>"Probability"</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>theme_bw</span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span> 
+  <span class='fu'>theme</span><span class='op'>(</span>legend.position <span class='op'>=</span> <span class='st'>"none"</span><span class='op'>)</span> <span class='op'>+</span> <span class='fu'>scale_fill_brewer</span><span class='op'>(</span>palette <span class='op'>=</span> <span class='st'>"Dark1"</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>theme</span><span class='op'>(</span>plot.title <span class='op'>=</span> <span class='fu'>element_text</span><span class='op'>(</span>
+    hjust <span class='op'>=</span> <span class='fl'>0.5</span>, face <span class='op'>=</span> <span class='st'>"bold"</span>, size <span class='op'>=</span> <span class='fl'>20</span><span class='op'>)</span><span class='op'>)</span>
 </code></pre>
 </div>
-<pre><code>[1] 0.00390625</code></pre>
+<p><img src="teatasting_files/figure-html5/unnamed-chunk-9-1.png" width="624" /></p>
 </div>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
