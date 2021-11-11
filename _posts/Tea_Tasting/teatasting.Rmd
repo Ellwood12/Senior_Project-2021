@@ -22,7 +22,6 @@ library(pander)
 
 </center>
 
-
 # **Background** 
 
 One of the first fathers' of statistics was named Ronald Fisher.  He is widely known for his research in statistic methods and design of experiments.  In one of his books, he gives a lesson on probability and statistics; which according to some sources, was based on a true event.
@@ -49,13 +48,13 @@ $$
 
 </center>
 
-The next factor we get to decide is at what point are we confortable with saying, "this Lady can indeed, taste the difference between the two types".  In statistics, we call this alpha.  And for this experiment and in common statistic practice, we are going to set alpha equal to 0.05.
+The next factor we get to decide is at what point are we comfortable with saying, "this Lady can indeed, taste the difference between the two types".  In statistics, we call this alpha.  And for this experiment and in common statistic practice, we are going to set alpha equal to 0.05.
 
 $$
 \alpha = 0.05\\
 $$
 
-Now that we have established our hypotheses and alpha, we can now begin our experiment.  To find answers to our experiment, we are going to perfrom an Exact Bionomial Test.  This test does well in counting the number of success compared to the number of failures.  In this experiment, we have 8 total cups with 2 groups of different tea preparation styles.  For each cup, she has 2 choices, giving her a 50% chance of being correct. 
+Now that we have established our hypotheses and alpha, we can now begin our experiment.  To find answers to our experiment, we are going to perform an Exact Binomial Test.  This test does well in counting the number of success compared to the number of failures.  In this experiment, we have 8 total cups with 2 groups of different tea preparation styles.  For each cup, she has 2 choices, giving her a 50% chance of being correct. 
 
 Using r-studio, we are going to use the binomial test to find out what the p-values would be based on how many cups she could identify correctly.  
 
@@ -81,7 +80,7 @@ $$
 
 
 
-The following graph helps us visualize what that this math looks like.  It is done by drawing out a Binomial Distribution and then highlighting the areas we are intesesting in solving.  The equation to this math is:
+The following graph helps us visualize what that this math looks like.  It is done by drawing out a Binomial Distribution and then highlighting the areas we are interesting in solving.  The equation to this math is:
 
 $$
 P(X=x) = \binom{8}{x}  p^x(1-p)^{8-x}
@@ -145,12 +144,17 @@ plot(0:8, dbinom(0:8, 8, 0.5), type = 'h',
      ylab = "P(X = x)", xlab = "Number of successes")
 ```
 
-And lastly, we have if she were to identify all 8 cups correctly, her value would be 0.003906, which is < 0.05.  With this value, we can say we evidence to suggest that the lady can indeed taste the difference between teh two types of tea.
+And lastly, we have if she were to identify all 8 cups correctly, her value would be 0.003906, which is < 0.05.  With this value, we can say we evidence to suggest that the lady can indeed taste the difference between the two types of tea.
 
 ```{r, include=FALSE}
 sum(dbinom(8,8,0.5)) %>% pander()
 ```
 
+<center>
+## **All Options**
+</center>
+
+For this last graph, I went ahead and gave the p-value that we would get for each given number of successes.  It might be worth discussing the p-values for the successes 1 and 0.  They both have p-values less than 0.05, but if she were to only get 1 cup correct, we wouldn't be say that she is good at identifying types.  It is important to think through the problem with the gathered information before making any accusations.
 
 ```{r}
 
@@ -159,7 +163,7 @@ data.frame(heads = 0:8,
 ggplot(aes(x = factor(heads), y = pmf, fill = factor(pmf))) +
   geom_col() +
   geom_text(
-    aes(label = round(pmf,3), y = pmf + 0.01),
+    aes(label = round(pmf, 3), y = pmf + 0.01),
     position = position_dodge(0.9),
     size = 3,
     vjust = 0
@@ -173,5 +177,8 @@ ggplot(aes(x = factor(heads), y = pmf, fill = factor(pmf))) +
     hjust = 0.5, face = "bold", size = 20))
 ```
 
-
+<center>
+## **Conclusion**
+</center>
+In today's blog, we were able to use Probability and Statistics to answers to this 'real world' question.  Now, most of our questions aren't going to be based on tea and milk, but Bionomial Distributions are being used constantly.  Where ever there is a question that broken down into Yes/No, True/False, or Success/Failure, this is the distribution you would want to use.  
 

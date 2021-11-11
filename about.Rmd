@@ -20,7 +20,7 @@ I chose to focus on Probability as my Senior Project because of the important ap
 
 2. Learning to Explain Math.  Not very many people like to open text books and try self teach.  I always appreciated the text books that went step by step, with examples and notes to follow the author.  
 
-3. Using programming to explain provide visuals and insights into the data.  For all of my blogs, I started off thinking, "1. What is my data, and 2. How do I want it to look?"  Sometimes I knew the visual I wanted to create, while other times, the layout of my data changed the direction I was headed.
+3. Using programming to explain insights into the data.  For all of my blogs, I started off thinking, "1. What is my data, and 2. How do I want it to look?"  Sometimes I knew the visual I wanted to create, while other times, the layout of my data changed the direction I was headed.
 
 Hopefully everyone finds these stories insightful and entertaining!
  
