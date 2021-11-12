@@ -1,0 +1,22 @@
+---
+title: "Survivor"
+description: |
+  In this real world event that happened during of World War II, we shall see if you can provide the answer that will save thousands, or be fooled by the simplicity of the problem.
+preview: ../../images/Army_Men.png
+date: 2021-11-12
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+<center>
+
+![](../../images/Flying.png){width=60% height=60%}
+
+</center>
+
+<center>
+
+![](../../images/Hit_Plane.png){width=60% height=60%}
+
+</center>

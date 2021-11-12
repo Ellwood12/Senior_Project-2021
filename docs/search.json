@@ -5,14 +5,14 @@
       "title": "Here I am!",
       "author": [],
       "contents": "\nHello Everyone!\nI am that one guy who finds computing statistics super interesting (and you must also because you made it to my web site).\nProbability started off feeling like a foreign concept couldn’t be explained because of how strange the results always turned. I felt this way until I started dabbling in creating random samples in programming softwares. Thanks to computers, we have the power to generate random samples at large amounts to create data needed for many experiments.\nI chose to focus on Probability as my Senior Project because of the important applications that are required to be a good Data Scientist.\nBeing able to explain a problem to anyone. Over the course of my degree, I have tried many times to explain my knowledge to friends and family with little success. This changed once I was able to change the question I was trying to tackle with story that anyone could follow.\nLearning to Explain Math. Not very many people like to open text books and try self teach. I always appreciated the text books that went step by step, with examples and notes to follow the author.\nUsing programming to explain insights into the data. For all of my blogs, I started off thinking, “1. What is my data, and 2. How do I want it to look?” Sometimes I knew the visual I wanted to create, while other times, the layout of my data changed the direction I was headed.\nHopefully everyone finds these stories insightful and entertaining!\n\n\n\n",
-      "last_modified": "2021-11-11T08:13:00-07:00"
+      "last_modified": "2021-11-12T15:06:42-07:00"
     },
     {
       "path": "index.html",
       "title": "Data Science Applications",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2021-11-11T08:13:00-07:00"
+      "last_modified": "2021-11-12T15:06:42-07:00"
     }
   ],
   "collections": ["posts/posts.json"]

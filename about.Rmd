@@ -5,7 +5,6 @@ description: |
 
 ```{r, include=FALSE}
 # https://ellwood12.github.io/data_science_blog/
-
 ```
 
 Hello Everyone!

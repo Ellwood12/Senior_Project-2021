@@ -72,13 +72,10 @@ Now that we have an idea of what is happening in this story, we can dive into th
 
 For this explanation, I am going to refer to the three tables below.  First thing to know about this puzzle is that the number "100", isn't actually needed to answer this question.  In other words, it is a distraction, meant to make you think on a large scale when really, the answer can be solved form a smaller sample sizes.
 
+
+# Table 1: 2 Passengers
+
 Let's start with analyzing the results from **Table 1**.  In this table, there are 2 possibilities; one "No", and one "Yes".  This would mean, of the two possibilities, there is a (1/2) chance that you get your seat.  So let's note, when there are 2 people, there is a 50% chance of getting your seat.
-
-For **Table 2** we are going to follow the same steps as in the paragraph before.  Upon listing out all the possible outcomes and counting up the "Yes/No", we get the result two Yes's and two No's.  This would mean we have a (2/4), or (1/2) chance of getting your seat. Now wait a minute, this is looking familiar, isn't this the same result as with 2 passengers...  Maybe the next Table will give us the final clue to solving this mystery.
-
-After writing the possibilities and adding the results in **Table 3**, we get the results four Yes's and four No's.  This can be written out as (4/8), or simplified to (1/2).  Jinkies! The chance of getting your seat if the first passenger doesn't remember their assigned seat comes out to be 50% again! I think it is time to solve the case.
-
-### Table 1: 2 Passengers
 
 a. First Passenger takes your seat
 b. First Passenger sits in their seat
@@ -87,7 +84,9 @@ a | b
 -|-
 No | Yes
 
-### Table 2: 3 Passengers
+# Table 2: 3 Passengers
+
+For **Table 2** we are going to follow the same steps as in the paragraph before.  Upon listing out all the possible outcomes and counting up the "Yes/No", we get the result two Yes's and two No's.  This would mean we have a (2/4), or (1/2) chance of getting your seat. Now wait a minute, this is looking familiar, isn't this the same result as with 2 passengers...  Maybe the next Table will give us the final clue to solving this mystery.
 
 a. First Passenger Sits in their seat, and so does person 2 
 b. First Passenger Sits in you seat 
@@ -98,7 +97,9 @@ a | b | c | d
 --|---|---|---
 Yes | No | Yes | No
 
-### Table 3:  4 Passengers
+# Table 3:  4 Passengers
+
+After writing the possibilities and adding the results in **Table 3**, we get the results four Yes's and four No's.  This can be written out as (4/8), or simplified to (1/2).  Jinkies! The chance of getting your seat if the first passenger doesn't remember their assigned seat comes out to be 50% again! I think it is time to solve the case.
 
 a. First Passenger Sits in their seat, and so does everyone else **(Yes)**
 
