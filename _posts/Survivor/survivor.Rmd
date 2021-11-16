@@ -1,7 +1,8 @@
 ---
 title: "Survivor"
 description: |
-  In this real world event that happened during of World War II, we shall see if you can provide the answer that will save thousands, or be fooled by the simplicity of the problem.
+  In this blog, we are going to analyze an event that took place during World War II.  If you can find a solution and understand the application, you will understand the decision that saved thousands.
+  
 preview: ../../images/Army_Men.png
 date: 2021-11-12
 output:
@@ -11,9 +12,11 @@ output:
 
 <center>
 
-![](../../images/Flying.png){width=60% height=60%}
+![](../../images/Flying.png){width=70% height=70%}
 
 </center>
+
+# **The Problem**
 
 <center>
 

@@ -16,10 +16,6 @@ output:
 
 </center>
 
-```{r setup, include=FALSE}
-#https://www.youtube.com/watch?v=ZyLVIvBidIA
-```
-
 <center>
 # **The Problem**
 </center>

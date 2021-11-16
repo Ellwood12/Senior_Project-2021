@@ -1,7 +1,7 @@
 ---
 title: "The Birthday Paradox"
 description: |
-  Are birthday's all random or is there a good chance that someone in the has the same birthday?  As we unravel this paradox, you will be suprised to find that the chance of sharing the same special day, really isn't that surprising.
+  Are birthday's all random or is there a good chance that someone in the has the same birthday?  As we unravel this paradox, you will be surprised to find that the chance of sharing the same special day, really isn't that surprising.
 preview: ../../images/cake_pic.png
 date: 2021-09-22
 output:
@@ -17,7 +17,7 @@ output:
 
 # **Background**
 
-Remember going to elementary school on your birthday and being so excited?  Today, everyone is going to be part of 'YOUR' special day, what could go wrong?  And then, remember getting to class and finding out that it wasn't just your birthday, but in fact another person's in your class.  Really! Someone else just happens to share the same birthday as you, even with 365 days of the year.  Well, in today's post we are going to uncover the probability of this occuring in any group size.
+Remember going to elementary school on your birthday and being so excited?  Today, everyone is going to be part of 'YOUR' special day, what could go wrong?  And then, remember getting to class and finding out that it wasn't just your birthday, but in fact another person's in your class.  Really! Someone else just happens to share the same birthday as you, even with 365 days of the year.  Well, in today's post we are going to uncover the probability of this occurring in any group size.
 
 # **Explanation**
 
@@ -57,7 +57,7 @@ What we learn from the previous step, is that there is 99.7% chance that two peo
 
 </center>
 
-From this point, the previous steps are applied for as many number of people are present to calculate the probabiliyt of Not Sharing a Birthday.  In order to find the probability of Sharing the same birthday will require one simple addition.  
+From this point, the previous steps are applied for as many number of people are present to calculate the probability of Not Sharing a Birthday.  In order to find the probability of Sharing the same birthday will require one simple addition.  
 
 Using the classroom example above, let's say that a third student enters the room.  To find out what the probability that two of the three students will share a birthday, the following will be done: 
 

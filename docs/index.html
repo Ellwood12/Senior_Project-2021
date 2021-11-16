@@ -2083,7 +2083,7 @@ function init_posts_list() {
     var src = $(img).attr('data-src');
     if (src) {
       $(img).attr('src', src);
-      $(img).load(function() {
+      $(img).on("load", function() {
         img.removeAttribute('data-src');
       });
     }
@@ -2280,7 +2280,7 @@ function init_posts_list() {
 <div class="description">
 <h2>The Birthday Paradox</h2>
 <div class="dt-tags"></div>
-<p>Are birthday's all random or is there a good chance that someone in the has the same birthday?  As we unravel this paradox, you will be suprised to find that the chance of sharing the same special day, really isn't that surprising.</p>
+<p>Are birthday's all random or is there a good chance that someone in the has the same birthday?  As we unravel this paradox, you will be surprised to find that the chance of sharing the same special day, really isn't that surprising.</p>
 </div>
 </a>
 <a href="posts/Twins/" class="post-preview">
