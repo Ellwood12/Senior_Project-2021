@@ -87,7 +87,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_meta_tags-->
 <title>Data Science Applications: Survivor</title>
 
-<meta property="description" itemprop="description" content="In this real world event that happened during of World War II, we shall see if you can provide the answer that will save thousands, or be fooled by the simplicity of the problem."/>
+<meta property="description" itemprop="description" content="In this blog, we are going to analyze an event that took place during World War II.  If you can find a solution and understand the application, you will understand the decision that saved thousands."/>
 
 
 <!--  https://schema.org/Article -->
@@ -97,20 +97,20 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
 <meta property="og:title" content="Data Science Applications: Survivor"/>
 <meta property="og:type" content="article"/>
-<meta property="og:description" content="In this real world event that happened during of World War II, we shall see if you can provide the answer that will save thousands, or be fooled by the simplicity of the problem."/>
+<meta property="og:description" content="In this blog, we are going to analyze an event that took place during World War II.  If you can find a solution and understand the application, you will understand the decision that saved thousands."/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:site_name" content="Data Science Applications"/>
 
 <!--  https://dev.twitter.com/cards/types/summary -->
 <meta property="twitter:card" content="summary"/>
 <meta property="twitter:title" content="Data Science Applications: Survivor"/>
-<meta property="twitter:description" content="In this real world event that happened during of World War II, we shall see if you can provide the answer that will save thousands, or be fooled by the simplicity of the problem."/>
+<meta property="twitter:description" content="In this blog, we are going to analyze an event that took place during World War II.  If you can find a solution and understand the application, you will understand the decision that saved thousands."/>
 
 <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","preview","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Survivor"]},{"type":"character","attributes":{},"value":["In this real world event that happened during of World War II, we shall see if you can provide the answer that will save thousands, or be fooled by the simplicity of the problem."]},{"type":"character","attributes":{},"value":["../../images/Army_Men.png"]},{"type":"character","attributes":{},"value":["2021-11-12"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","preview","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Survivor"]},{"type":"character","attributes":{},"value":["In this blog, we are going to analyze an event that took place during World War II.  If you can find a solution and understand the application, you will understand the decision that saved thousands."]},{"type":"character","attributes":{},"value":["../../images/Army_Men.png"]},{"type":"character","attributes":{},"value":["2021-11-12"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]}]}
 </script>
 <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -2062,7 +2062,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Survivor","description":"In this real world event that happened during of World War II, we shall see if you can provide the answer that will save thousands, or be fooled by the simplicity of the problem.","authors":[],"publishedDate":"2021-11-12T00:00:00.000-07:00"}
+{"title":"Survivor","description":"In this blog, we are going to analyze an event that took place during World War II.  If you can find a solution and understand the application, you will understand the decision that saved thousands.","authors":[],"publishedDate":"2021-11-12T00:00:00.000-07:00"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2088,7 +2088,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <h1>Survivor</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-<p>In this real world event that happened during of World War II, we shall see if you can provide the answer that will save thousands, or be fooled by the simplicity of the problem.</p>
+<p>In this blog, we are going to analyze an event that took place during World War II. If you can find a solution and understand the application, you will understand the decision that saved thousands.</p>
 </div>
 
 
@@ -2097,9 +2097,38 @@ document.addEventListener('DOMContentLoaded', function() {
 <p><img src="../../images/Flying.png" style="width:70.0%;height:70.0%" /></p>
 </center>
 <h1 id="the-problem"><strong>The Problem</strong></h1>
+<p>During World War II, a group of researchers were asked to help the air force provide reason to how they could better protect their planes. The US military had purposed purchasing Armour that could cover the plane’s vital pieces. They were hoping by doing so, that less planes would get shot down/damaged.</p>
+<p>So, what they did, was they looked at bullet holes/damage on planes that had returned. An example being the image below.</p>
 <center>
 <p><img src="../../images/Hit_Plane.png" style="width:60.0%;height:60.0%" /></p>
 </center>
+<p>Based off the image above, what would you do? What steps would you take to help protect the planes and pilots?</p>
+<h1 id="analysis"><strong>Analysis</strong></h1>
+<p>Before the military submitted their final decision, leader asked a group of mathematicians, (including famous mathematician Andrew Wald), to look over the project for any extra insights.</p>
+<p>The solution that the mathematicians gave back was quite polar to what was previously presented. Their solution was: don’t armor the wings and tail. armor the engine. Now, if you weren’t to have looked at the image, protecting the engine seems like a no-brainer, but according to the image, there are a lot of red dots all over the wings and tail.</p>
+<p>The researchers explained that all the images they were studying were of planes that were returning. None of the images explained what was happening to the planes that were not coming back. With this knowledge, it can be supposed that the planes that weren’t coming back were being hit in the areas where there were not red dots!</p>
+<p>The insight and reasoning to this problem later produced what is known today as the <strong>Survivorship Bias</strong>. Survivorship bias describes the error of looking only at subjects who have reached a certain point without considering the subjects who haven’t.</p>
+<p>Thanks to this insight, the military was able to better protect their planes and thus, save lives.</p>
+<h1 id="further-application"><strong>Further Application</strong></h1>
+<p>The application of <strong>Survivorship Bias</strong> doesn’t end with World War II, it is still extremely applicable. To illustrate what this bias is trying to explain, I will use the following image.</p>
+<center>
+<p><img src="../../images/everyone.png" style="width:60.0%;height:60.0%" /></p>
+</center>
+<p>The mistake that most commonly takes place is that the data (or people being surveyed) don’t represent the whole picture, but rather, a part that doesn’t interact well with the rest.</p>
+<p>Some great examples from off the web:</p>
+<ul>
+<li><p><strong>Bill Gates</strong>, <strong>Steve Jobs</strong>, and <strong>Mark Zuckerberg</strong> dropped out of college and became wildly successful. But for most college dropouts, it means unemployment and having more immediate student debt.</p></li>
+<li><p><strong>Messi</strong>, <strong>Cristiano Ronaldo</strong>, and <strong>Neymar</strong> are getting paid highly as football players. But the truth is, most players never make it into a game in their lifetime.</p></li>
+<li><p>Motivational gurus talk about following your passion and trusting your gut feelings — but there is no shortage of people who followed their passion and ended up seriously wrong.</p></li>
+</ul>
+<center>
+<p><img src="../../images/bais.png" style="width:70.0%;height:70.0%" /></p>
+</center>
+<p>A survivorship bias that I found interesting was about Music and Art. Music from earlier periods is often thought of as better than music now. This could be because only the best music from the period is played now, while today’s music, good and bad, is far more available. So, survivorship of better songs creates the bias in perception.</p>
+<h1 id="conclusion"><strong>Conclusion</strong></h1>
+<p>I hope you were able to enjoy this blog and learn something you can apply in your daily life. Understanding where your data came from and how it is going to be used can have vital consequences.</p>
+<p>If you are interested in knowing more about the history of <strong>Survivorship Bias</strong>, I would recommend the TEDx below!</p>
+<p><a href="https://www.youtube.com/watch?v=NtUCxKsK4xg" class="uri">https://www.youtube.com/watch?v=NtUCxKsK4xg</a></p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->

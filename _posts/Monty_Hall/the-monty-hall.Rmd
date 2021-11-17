@@ -1,7 +1,7 @@
 ---
 title: "The Monty Hall"
 description: |
-  Are you ready to put your luck to the test to try and win a new car?  As we explore the once great game, "Let Make a Deal", back from 1975, you will have the chance to see if you can crack the puzzle and win the prize.
+  Are you ready to put your luck to the test to try and win a new car?  As we explore the once great game, "Let Make A Deal", back from 1975, you will have the chance to see if you can crack the puzzle and win the prize.
   
 preview: ../../images/Attempt2.png
 
@@ -19,11 +19,11 @@ output:
 
 # **The Game** 
 
-The American TV show, "Let's Make A Deal", started in 1963 and was a global hit.  The premise of the game was that a contestant would be offered a prize and then given a choice whether they would like to keep it, or exchange it for a different prize.  The challenge is that the other prize is hidden from the player.  So in the act of exchanging, the player doesn't know if they are getting a new prize of better or worse value.  
+The American TV show, "Let's Make A Deal", started in 1963 and was a global hit.  The premise of the game was that a contestant would be offered a prize and then given a choice whether they would like to keep it or exchange it for a different prize.  The challenge is that the other prize is hidden from the player.  So, in the act of exchanging, the player doesn't know if they are getting a new prize of better or worse value.  
 
 On the show, there was a particular game that was played that has since then become famous and has been named the Monty Hall Problem. In this game, the contestant would be shown three doors, behind one of them, a glorious prize, behind the other two, goats.  Through a serious of steps, the contestant would try and guess which door has the prize.
 
-Before I share some statistical knowledge to them game, lets run through it as if we were contestants.  Instead of playing behind three doors, we will play with playing cards that either have a goat or a queen.  As in the image below, there are there are two possible outcomes, a goat or a queen.
+Before I share some statistical knowledge to them game, lets run through it as if we were contestants.  Instead of playing behind three doors, we will play with playing cards that either have a goat or a queen.  As in the image below, there are there are two possible outcomes, a goat, or a queen.
 
 <center>
 
@@ -61,7 +61,7 @@ After picking which door to save, Monty would then show you a goat behind one of
 ![](../../images/Act_2.png){width=70%}
 </center>
 
-At this point, you know that the Queen is either behind the card you chose at the beginning or behind the card still face down.  Monty will then ask you, would you like to keep your card, or switch to the other one.  Which ever card you pick will be the card you end the game with, resulting in either a grand prize, or a goat. 
+At this point, you know that the Queen is either behind the card you chose at the beginning or behind the card still face down.  Monty will then ask you, would you like to keep your card, or switch to the other one.  Whichever card you pick will be the card you end the game with, resulting in either a grand prize, or a goat. 
 
 In this example, you decide to test your luck and stay with the card you picked at the beginning.  Monty then flips over the cards to show that your card had the other goat.  Sadly, you lost the game and didn't get the prize.
 
@@ -69,13 +69,13 @@ In this example, you decide to test your luck and stay with the card you picked 
 ![](../../images/Act_3.png){width=70%}
 </center>
 
-The concept of this game seems quite straightforward - pick a card and hope that you picked right.  But, there is little more than just luck at play in this game.  As this game was played more and more times, statisticans found that this game relid greatly upon the fundatmentals of probability.  
-In the next section, I will elaborate on how probabilty might hold the key to understand this game as well as winning the prize.
+The concept of this game seems quite straightforward - pick a card and hope that you picked right.  But there is little more than just luck at play in this game.  As this game was played more and more times, statisticians found that this game relied greatly upon the fundamentals  of probability.  
+In the next section, I will elaborate on how probability  might hold the key to understand this game as well as winning the prize.
 
 
 # **The Probability Explained**
 
-To begin, let start off by understanding some simple probability facts.  First, all the probabilities in a given event must add up to 1.  The probabilities of each event may change or moved around but at the end, must always add up to 1.  
+To begin, let start off by understanding some simple probability facts.  First, all the probabilities in each event must add up to 1.  The probabilities of each event may change or moved around but at the end, must always add up to 1.  
 
 Now let's begin; we know that behind two of the cards there are goats and behind the other is the queen.  So, if we were to assign probabilities of being the queen to each card, each would have a 1/3 chance.  At this point, trying to guess which card would be the queen would be a gamble.
 
@@ -85,14 +85,14 @@ Now let's begin; we know that behind two of the cards there are goats and behind
 
 Next, Monty is going to flip over one of the cards to show us a goat.  However, we now have an issue with our probabilities, they no longer add up to 1!  Does that mean each card now has a fifty-fifty of being the queen?  
 
-What happens now is what makes this game so interesting.  When we chose that first card, it had a probability of 1/3.  This probability will not change, but rather, the probability of other card.  In order to correct our probability issue, we will have to give it a new probability.  
+What happens now is what makes this game so interesting.  When we chose that first card, it had a probability of 1/3.  This probability will not change, but rather, the probability of another card.  To correct our probability issue, we will have to give it a new probability.  
 
 
 <center>
 ![](../../images/Exp_2.png){width=70%}
 </center>
 
-To figure this out, lets write out what we know.  We know that our card has a 1/3 probability of having the queen.  So to find the probability of the new card, we will subtract 1/3 to 1.  This will give us the probability that the 'Other Card' is the queen.
+To figure this out, lets write out what we know.  We know that our card has a 1/3 probability of having the queen.  So, to find the probability of the new card, we will subtract 1/3 to 1.  This will give us the probability that the 'Other Card' is the queen.
 
 $$
 \text{------------------------------------------------}
