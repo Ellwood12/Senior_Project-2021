@@ -115,7 +115,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["the-two-child-problem_files/anchor-4.2.2/anchor.min.js","the-two-child-problem_files/bowser-1.9.3/bowser.min.js","the-two-child-problem_files/distill-2.2.21/template.v2.js","the-two-child-problem_files/figure-html5/unnamed-chunk-1-1.gif","the-two-child-problem_files/jquery-3.6.0/jquery-3.6.0.js","the-two-child-problem_files/jquery-3.6.0/jquery-3.6.0.min.js","the-two-child-problem_files/jquery-3.6.0/jquery-3.6.0.min.map","the-two-child-problem_files/popper-2.6.0/popper.min.js","the-two-child-problem_files/tippy-6.2.7/tippy-bundle.umd.min.js","the-two-child-problem_files/tippy-6.2.7/tippy-light-border.css","the-two-child-problem_files/tippy-6.2.7/tippy.css","the-two-child-problem_files/tippy-6.2.7/tippy.umd.min.js","the-two-child-problem_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["the-two-child-problem_files/anchor-4.2.2/anchor.min.js","the-two-child-problem_files/bowser-1.9.3/bowser.min.js","the-two-child-problem_files/distill-2.2.21/template.v2.js","the-two-child-problem_files/figure-html5/unnamed-chunk-1-1.gif","the-two-child-problem_files/figure-html5/unnamed-chunk-2-1.gif","the-two-child-problem_files/jquery-3.6.0/jquery-3.6.0.js","the-two-child-problem_files/jquery-3.6.0/jquery-3.6.0.min.js","the-two-child-problem_files/jquery-3.6.0/jquery-3.6.0.min.map","the-two-child-problem_files/popper-2.6.0/popper.min.js","the-two-child-problem_files/tippy-6.2.7/tippy-bundle.umd.min.js","the-two-child-problem_files/tippy-6.2.7/tippy-light-border.css","the-two-child-problem_files/tippy-6.2.7/tippy.css","the-two-child-problem_files/tippy-6.2.7/tippy.umd.min.js","the-two-child-problem_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2127,24 +2127,22 @@ document.addEventListener('DOMContentLoaded', function() {
 <p>With the aid of this last visual, we can see that there is a probability of 33% that the other twin is a boy and a 66% that the other twin is a girl.</p>
 <h1 id="conclusion"><strong>Conclusion</strong></h1>
 <p>After a moment of thinking, you turn to the lady on the bench and ask, “I am just guessing here, but is your other child a girl?” The lady responses with mild surprise, “Yes, have we meet before?” You reply, “no”, and tell her it was just a good guess.</p>
+<p>The graph below illustrates how after # of Rounds, that the probability of the second child being a girl eventually will level out around 66%.</p>
+<h1 id="code"><strong>Code</strong></h1>
+<p>For fun, I decided to try and prove the answer to the Twin Probelm with code.<br />
+The steps I took were: First, I created table of 2 columns and 100 rows. For each column, I randomly filled in each cell with either a ‘b’ - for boy, or ‘g’ - for girl. Second, the story tells us that we know that one of the twins is a boy. I then filtered out the rows that didn’t have at least 1 ‘b’. This got rid of the possibility of the twins both being a girl.</p>
+<p>Next, I created two running sum columns, one for Girl and one for Boy. The Girl column, would first, see if there was a ‘g’ in either column 1 or 2, if there was, it added 1 to the sum. The Boy column, looked to see if both columns in each row had ‘b’.</p>
+<p>I have an image below to show what the data looks like at this point.</p>
+<img src="../../images/Gathered_Data.png" style="width:90.0%" />
+</center>
+<p>This process was done for the number of trials (the index). The graph below shows how the perentage of Boy_Count and Girl_Count change over the number of rounds (trials/index number).</p>
+<p>According to the math explained above, the chance of the other twin being a girl should be 66% and for a boy 33%. I think it is super cool to see how as more rounds are played in the image below, each bar gets closer to that line/mark. This further proves to me that the answer to this question is correct and be proven outside of reason.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>good</span> <span class='op'>%&gt;%</span> <span class='fu'>ggplot</span><span class='op'>(</span><span class='fu'>aes</span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>Gender</span>, y <span class='op'>=</span> <span class='va'>Percent</span>, fill <span class='op'>=</span> <span class='va'>Gender</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span> 
-  <span class='fu'>geom_col</span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span>
-  <span class='fu'><a href='https://rdrr.io/pkg/gganimate/man/transition_time.html'>transition_time</a></span><span class='op'>(</span><span class='va'>Round</span><span class='op'>)</span> <span class='op'>+</span>
-  <span class='co'>#labs(title = good$Round) +</span>
-  <span class='fu'>theme_bw</span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span>
-  <span class='fu'>scale_fill_manual</span><span class='op'>(</span>values <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"deepskyblue"</span>, <span class='st'>"purple"</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span> 
-  <span class='fu'>geom_hline</span><span class='op'>(</span>yintercept <span class='op'>=</span> <span class='fl'>.666</span>, linetype <span class='op'>=</span> <span class='st'>"dashed"</span>, color <span class='op'>=</span> <span class='st'>"black"</span><span class='op'>)</span> <span class='op'>+</span> 
-  <span class='fu'>geom_hline</span><span class='op'>(</span>yintercept <span class='op'>=</span> <span class='fl'>.333</span>, linetype <span class='op'>=</span> <span class='st'>"dashed"</span>, color <span class='op'>=</span> <span class='st'>"black"</span><span class='op'>)</span> <span class='op'>+</span>
-  <span class='fu'>scale_y_continuous</span><span class='op'>(</span>labels <span class='op'>=</span> <span class='fu'>scales</span><span class='fu'>::</span><span class='va'><a href='https://scales.r-lib.org/reference/label_percent.html'>percent</a></span><span class='op'>)</span> <span class='op'>+</span>
-  <span class='fu'>labs</span><span class='op'>(</span>title <span class='op'>=</span> <span class='st'>"Number of Rounds Played: {frame_time}"</span>,
-       x <span class='op'>=</span> <span class='st'>"Gender"</span>,
-       y <span class='op'>=</span> <span class='st'>"Other Child Probability"</span><span class='op'>)</span> <span class='op'>+</span>
-  <span class='fu'>theme</span><span class='op'>(</span>plot.title <span class='op'>=</span> <span class='fu'>element_text</span><span class='op'>(</span>hjust <span class='op'>=</span> <span class='fl'>0.5</span>, size <span class='op'>=</span> <span class='fl'>28</span><span class='op'>)</span><span class='op'>)</span> 
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>graph</span>
 </code></pre>
 </div>
-<p><img src="the-two-child-problem_files/figure-html5/unnamed-chunk-1-1.gif" /><!-- --></p>
+<p><img src="the-two-child-problem_files/figure-html5/unnamed-chunk-2-1.gif" /><!-- --></p>
 </div>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->

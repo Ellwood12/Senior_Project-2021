@@ -66,6 +66,8 @@ With the aid of this last visual, we can see that there is a probability of 33% 
 
 After a moment of thinking, you turn to the lady on the bench and ask, "I am just guessing here, but is your other child a girl?"  The lady responses with mild surprise, "Yes, have we meet before?"  You reply, "no", and tell her it was just a good guess.
 
+The graph below illustrates how after # of Rounds, that the probability of the second child being a girl eventually will level out around 66%.
+
 ```{r setup, include=FALSE}
 library(tidyverse)
 library(gganimate)
@@ -123,13 +125,11 @@ good = at %>% mutate(Percent = round(Count/Round,2))
 
 ```
 
+```{r, include=FALSE}
 
-```{r}
-
-good %>% ggplot(aes(x = Gender, y = Percent, fill = Gender)) + 
+graph = good %>% ggplot(aes(x = Gender, y = Percent, fill = Gender)) + 
   geom_col() +
   transition_time(Round) +
-  #labs(title = good$Round) +
   theme_bw() +
   scale_fill_manual(values = c("deepskyblue", "purple")) + 
   geom_hline(yintercept = .666, linetype = "dashed", color = "black") + 
@@ -140,4 +140,27 @@ good %>% ggplot(aes(x = Gender, y = Percent, fill = Gender)) +
        y = "Other Child Probability") +
   theme(plot.title = element_text(hjust = 0.5, size = 28)) 
 
+```
+
+# **Code**
+
+For fun, I decided to try and prove the answer to the Twin Probelm with code.  
+The steps I took were:
+First, I created table of 2 columns and 100 rows.  For each column, I randomly filled in each cell with either a 'b' - for boy, or 'g' - for girl.
+Second, the story tells us that we know that one of the twins is a boy.  I then filtered out the rows that didn't have at least 1 'b'.
+This got rid of the possibility of the twins both being a girl.
+
+Next, I created two running sum columns, one for Girl and one for Boy.  The Girl column, would first, see if there was a 'g' in either column 1 or 2, if there was, it added 1 to the sum.  The Boy column, looked to see if both columns in each row had 'b'.
+
+I have an image below to show what the data looks like at this point.
+
+![](../../images/Gathered_Data.png){width=90%}
+</center>
+
+This process was done for the number of trials (the index).  The graph below shows how the perentage of Boy_Count and Girl_Count change over the number of rounds (trials/index number).
+
+According to the math explained above, the chance of the other twin being a girl should be 66% and for a boy 33%.  I think it is super cool to see how as more rounds are played in the image below, each bar gets closer to that line/mark.  This further proves to me that the answer to this question is correct and be proven outside of reason.
+
+```{r}
+graph
 ```

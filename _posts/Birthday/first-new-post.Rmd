@@ -75,7 +75,7 @@ $$
 
 As more students enter the classroom, the probability of sharing a birthday will increase drastically!  For many people, the Birthday Paradox seems very illogical - especially when you find out that with 23 people in a room, there is a 50% chance that two people will share the same birthday.  But once the pattern and explanation is given, the problem seems to make more sense.
 
-```{r, warning=FALSE, message=FALSE}
+```{r, warning=FALSE, message=FALSE, include=FALSE}
 
 library(tidyverse)
 library(plotly)
@@ -101,7 +101,7 @@ df = data.frame(x_range, final)
 
 ```
 
-```{r, warning=FALSE, message=FALSE}
+```{r, warning=FALSE, message=FALSE, include=FALSE}
 
 graph = ggplot(data = df, 
                aes(x = x_range, y = final, group = 1 ,
@@ -116,13 +116,58 @@ graph = ggplot(data = df,
   scale_y_continuous(labels = scales::percent) +
   theme(plot.title = element_text(hjust = 0.5)) + 
   scale_x_continuous(breaks = scales::breaks_width(10))
+```
 
+# **The Code**
+
+The plot below helps us visualize how the probability of sharing a birthday changes according to the group size (number of people).  The code to creating this plot will be placed below.  It is fasinating to see how the percentages change.
+
+```{r}
 ggplotly(graph, tooltip = "text") %>% config(displayModeBar = F)
-
 
 ```
 
 <center>
 *Move your mouse over the plot to see % per Group size.*
 </center>
+
+# ** Appendix**
+
+```{r, warning=FALSE, message=FALSE}
+
+library(tidyverse)
+library(plotly)
+library(ggplot2)
+
+x_range = seq(1:71)
+inputs = (0:71)
+
+ratio = 0
+answer = 0
+
+for (i in inputs) {
+  ratio[i + 1] = (365 - i)/365
+}
+
+for (i in inputs) {
+  answer[i] = prod(ratio[1:i])
+}
+
+final = 1 - answer
+df = data.frame(x_range, final)
+
+graph = ggplot(data = df, 
+               aes(x = x_range, y = final, group = 1 ,
+                   text = paste("Number of People: ", x_range, "\n",
+                "Probability: ",round((final * 100),1), "%"))) +
+  geom_line(aes(x = x_range, y = final), colour = "blue") + 
+  geom_hline(yintercept = .501, linetype = "dashed", color = "red") +
+  labs(title = "What are the Chances of a Shared Birthday?",
+       y = "Probability",
+       x = "Number of People") +
+  theme_bw() + 
+  scale_y_continuous(labels = scales::percent) +
+  theme(plot.title = element_text(hjust = 0.5)) + 
+  scale_x_continuous(breaks = scales::breaks_width(10))
+```
 

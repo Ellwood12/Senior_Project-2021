@@ -139,7 +139,7 @@ f_data = dat %>%
                            dat =="q" ~ "g"))
 ```
 
-```{r}
+```{r, include=FALSE}
 
 fdat <- f_data %>% 
   mutate(running_total_queens = case_when(Door_2 == "q" ~ TRUE,
@@ -151,7 +151,7 @@ fdat <- f_data %>%
 fdat$Round <- 1:nrow(fdat)
 ```
 
-```{r}
+```{r, include=FALSE}
 clean = fdat %>% select(c("Round", "cum_sum_queen","cum_sum_goats"))
 
 cdat <- clean %>% 
@@ -161,7 +161,7 @@ cdat <- clean %>%
 ```
 
 
-```{r}
+```{r, include=FALSE}
 
 #########
 # GRAPH #
@@ -184,14 +184,17 @@ scale_x_continuous(breaks = scales::breaks_width(n/5)))+
   geom_hline(yintercept= (66.6), linetype="dashed", color = "black")+ 
   geom_hline(yintercept= (33.3), linetype="dashed", color = "black")
 
+
+```
+
+```{r}
 ggplotly(p, dynamicTicks = TRUE) %>%
   layout(hovermode = "x") %>% 
   config(displayModeBar = F)
 
-
 ```
 
-
+*Hover over the graph to see how the Chance of Winning changes over time.*
 
 
 
