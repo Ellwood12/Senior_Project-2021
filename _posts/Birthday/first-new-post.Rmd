@@ -1,7 +1,7 @@
 ---
 title: "The Birthday Paradox"
 description: |
-  Are birthday's all random or is there a good chance that someone in the has the same birthday?  As we unravel this paradox, you will be surprised to find that the chance of sharing the same special day, really isn't that surprising.
+  Are birthday's all random or is there a good chance that someone in the room has the same birthday?  As we unravel this paradox, you will be surprised to find that the chance of sharing the same special day, really isn't that surprising.
 preview: ../../images/cake_pic.png
 date: 2021-09-22
 output:
@@ -17,19 +17,19 @@ output:
 
 # **Background**
 
-Remember going to elementary school on your birthday and being so excited?  Today, everyone is going to be part of 'YOUR' special day, what could go wrong?  And then, remember getting to class and finding out that it wasn't just your birthday, but in fact another persons in your class.  Really! Someone else just happens to share the same birthday as you, even with 365 days of the year.  Well, in today's post we are going to uncover the probability of this occurring in any group size.
+Remember going to elementary school on your birthday and being so excited?  Because today is your birthday, everyone is going to be part of 'YOUR' special day, what could go wrong?  But then the strangest thing happens, you get to class and find out that it isn't just **your** birthday, but in fact the birthday of the kid you sit right next to.  Really?! Someone else shares the same birthday as you, even with 365 days of the year?  Well, in today's post we are going to uncover the probability of this occurring in any group size.
 
 # **Explanation**
 
-The analysis of this problem will require us to tackle the issue from an opposing view.  Instead focusing on the Probability of Sharing the same date, we are going to begin with the Probability of *Not* Sharing the date.
-  The reason we will want t0 do that is because of the following:
+The analysis of this problem will require us to tackle the issue from a different angle.  Instead of focusing on the Probability of Sharing the same date, we are going to begin with the Probability of *Not* Sharing the same date.
+  The reason we will want to do that is because of the following:
   
 $$
 \text{------------------------------------------------}
 \\\text{Prob(Sharing the Same Birthday) = 1 - Prob(NOT Sharing the Same Birthday)} \\\text{------------------------------------------------}
 $$
 
-Let's tackle this problem with an experiment by creating a classroom that is going to slowing fill up with students.  As the first students comes into the room, the probability that he doesn't share a birthday with any one in the room is 100%.  This should make sense because there is no one else in the room, so of course there is a 100% chance.
+Let's tackle this problem with an experiment by creating a classroom that is going to slowly fill up with students.  As the first students comes into the room, the probability that they doesn't share a birthday with any one in the room is 100%.  This should make sense because there is no one else in the room, so of course there is a 100% chance.
 
 <center>
 
@@ -37,19 +37,18 @@ Let's tackle this problem with an experiment by creating a classroom that is goi
 
 </center>
 
-The real trouble will begin as the next student enters the room. Now, we are trying to calculate the chance that the next person WILL NOT have the same birthday; the way to do that will be in two steps.
+The puzzle will start to grow as the next student enters the room.  We are now going to try to calculate the chance that the next person WILL NOT have the same birthday; the way to do that will be in two steps.
 
 1. First, take the birthday of student 1 out from our pool of options.  This will leave us with 364 possible ways to NOT share the same day as student 1.  (364/365)
 
-2. Next, multiply the probability of students 2 NOT sharing a birthday with the other students by the probability that student 1 didn't share a birthday with anyone when he was the only one if the classroom.
+2. Next, multiply the probability of students 2 NOT sharing a birthday with the other student with the probability that student 1 didn't share a birthday with anyone when they were the only one if the classroom. *(I know that was extremely wordy, so hopefully the following clip helps you visualize what was just written.)*
 
-*A mathematical explanation of the previous steps will be offered later*
 
 $$
 \frac{365}{365} *\frac{364}{365} = 99.7\text%
 $$
 
-What we learn from the previous step, is that there is 99.7% chance that two people will not share the same birthday.
+What we learn from the previous step, is that there is a 99.7% chance that the two people will not share the same birthday.
 
 <center>
 
@@ -57,7 +56,7 @@ What we learn from the previous step, is that there is 99.7% chance that two peo
 
 </center>
 
-From this point, the previous steps are applied for as many people are present to calculate the probability of Not Sharing a Birthday.  To find the probability of Sharing the same birthday will require one simple addition.  
+From this point, the previous steps are applied for as many people present to calculate the probability of Not Sharing a Birthday.  To find the probability of Sharing the same birthday will require one simple step.  
 
 Using the classroom example above, let's say that a third student enters the room.  To find out what the probability that two of the three students will share a birthday, the following will be done: 
 
@@ -120,7 +119,7 @@ graph = ggplot(data = df,
 
 # **The Code**
 
-The plot below helps us visualize how the probability of sharing a birthday changes according to the group size (number of people).  The code to creating this plot will be placed below.  It is fasinating to see how the percentages change.
+The plot below helps us visualize how the probability of sharing a birthday changes according to the group size (number of people).  The code to creating this plot will be placed below.  It is fascinating to see how the percentages change.
 
 ```{r}
 ggplotly(graph, tooltip = "text") %>% config(displayModeBar = F)
